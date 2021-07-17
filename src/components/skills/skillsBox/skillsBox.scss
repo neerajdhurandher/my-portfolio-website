@@ -1,0 +1,69 @@
+  @import '../../../style/App.scss';
+  
+  .skills__box {
+    position: relative;
+    max-width: 320px;
+    height: 320px;
+    margin: 15px auto;
+    cursor: pointer;
+    padding: 5%;
+    border-radius: 15 px;
+    border: 2px solid $main-color;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 2px 2px 4px rgb(185, 179, 179);
+      
+    }
+    img:hover{
+      transform: scale(1.08);
+      transition: 0.2s ease;
+    }
+
+
+    p:nth-child(1){
+      margin-top: 10%;
+      color:$main-color;
+    }
+
+    .skills__hover-info {
+      background-color: rgba($main-color, 0.8);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: 0.3s ease;
+      
+      p {
+        text-transform: uppercase;
+      }
+    }
+    .skills__hover-info:hover {
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 990px) {
+
+    .skills__box {
+      position: relative;
+      max-width: 250px;
+      height: auto;
+      margin: 10% auto;
+      cursor: pointer;
+      padding: 3%;
+      border-radius: 15px;
+      border: 2px solid $main-color;
+      img {
+        width: 250px;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 2px 2px 4px rgb(185, 179, 179);
+        
+      }
+    }
+
+  }

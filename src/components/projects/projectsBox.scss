@@ -1,0 +1,76 @@
+@import '../../style/App.scss';
+
+.blog__box {
+ 
+  // width: 100%;
+  width: 320px;
+  height: min-content;
+  position: relative;
+  margin: 20px auto;
+  padding: 2%;
+  border-radius: 10px;
+  color: #000;
+  // border: 4px solid $main-color;
+ background-color: $white-color;
+  
+
+  .blog__image {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: black;
+    }
+
+    .blog__hover {
+      cursor: pointer;
+      transition: 0.3s ease;
+      background-color: rgba($main-color, 0.8);
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .blog__image:hover {
+    .blog__hover {
+      opacity: 1;
+    }
+  }
+
+  .blog__info {
+    padding-top: 15%;
+    padding-bottom: 8%;
+    padding-left: 8%;
+    padding-right: 8%;
+
+    h4 {
+      text-transform: uppercase;
+      text-align: center;
+      color: $main-color;
+      background-color: $bg-color;
+      padding: 1%;
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .blog__box {
+    width: 250px;
+    .blog__image {
+      width: 240px;
+      height: 240px;
+    }
+
+  }
+
+}
+

@@ -1,0 +1,62 @@
+@import '../../style/App.scss';
+
+
+
+.team__box {
+  max-width: max-content;
+  height: max-content;
+  margin: 0 0;
+  margin-top: 10%;
+  display: flex;
+  cursor: pointer;
+  // position: relative;
+  // align-items: center;
+
+  .institute-round-image{
+    // position: relative ;
+    // display: flex;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+    }
+
+  .team__box-info {
+    width: 100%;
+    display:relative ;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    margin-top: 5px;    
+
+    p {
+      color: $white-color;
+      margin-bottom: 10px;
+
+    }
+    p:nth-child(1) {
+      color: $white-color;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .team__box{
+    padding: auto;
+    margin-top: 4%;
+    align-items: center;
+
+    .team__box-info{
+      p{
+        width: max-content;
+        font-size: 30px;
+      }
+      p:nth-child(3){
+        font-size: 25px;
+      }
+      p:nth-child(4){
+        font-size: 23px;
+      }
+    }
+  }
+}

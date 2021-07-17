@@ -1,0 +1,14 @@
+@import '../../style/App.scss';
+
+.projects {
+  background-color: $light-color;
+  padding: 60px 0;
+  color: white;
+  background-color: rgb(27, 26, 26);
+}
+
+@media screen and (max-width: 990px) {
+  #projects { 
+    text-align: center;
+  }
+}

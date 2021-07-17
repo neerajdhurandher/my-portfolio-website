@@ -1,0 +1,56 @@
+@import '../../style/App.scss';
+
+#about {
+  padding: 60px 0;
+  color: white;
+  background-color: rgb(27, 26, 26);
+}
+p{
+  text-align: center;
+}
+.resume_dow_btn{
+  margin-top: 10%;
+  margin-left: 30%;
+}
+.about_box_li{
+  margin-top: 5%;
+}
+.about_box_icon{
+  display: flex;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  float: left;
+}
+
+.about_box_title{
+  display: inline-flex;
+  // margin: auto;
+  color: $main-color;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.about_box_value{
+  display: inline-flex;
+  width: max-content;
+  // margin: auto;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 500px) {
+  #about {
+    text-align: center;
+  }
+  .resume_dow_btn{
+    margin-top: 5%;
+  }
+  .about_box_title{
+    text-align: center;
+    // position: fixed;
+  }
+  .about_box_value{
+    text-align: center;
+    // position: fixed;
+  }
+}

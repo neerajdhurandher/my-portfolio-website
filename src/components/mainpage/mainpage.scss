@@ -1,0 +1,92 @@
+@import '../../style/App.scss';
+
+// *{
+//   color: white;
+//   background-color: rgb(27, 26, 26);
+// }
+
+.hero {
+  padding-top: 1%;
+  width: 100%;
+  padding-bottom: 50px;
+  color: white;
+  background-color: rgb(27, 26, 26);
+  .hero-info {
+    padding-top: 100px;
+    padding-left: 5%;
+
+    p {
+      padding-top: 20px;
+      padding-bottom: 50px;
+    }
+
+    .typewriter {
+      font-family: sans-serif;
+      font-weight:auto;
+      font-size:40px;
+      text-align: start;
+      color: #FFE600;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:10vh;
+
+      .typetext{
+        color: #FFE600;
+      
+      }
+    }
+  }
+
+  .hero-image {
+    margin-top: 4%;
+    width: 60%;
+    height: 10%;
+    margin-right: 2%;
+    float: right;
+    background-color: transparent;
+
+  }
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 1080px) {
+  .hero {
+    padding-top: 10%;
+
+    .hero-info {
+      padding-top: 0px;
+    }
+  
+
+    .hero-image {
+      float: none;
+      margin: auto auto;
+      margin-top: 8%;
+      background-color: transparent;
+
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .hero {
+    .hero-info {
+      text-align: center;
+    }
+
+    .hero-image {
+      float: none;
+      margin-top: -2%;
+      // margin: 0 auto;
+      background-color: transparent;
+
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import '../../style/App.scss';
+
+.aboutdetails{
+  display: inline-flex;
+
+  .about_details_icon{
+    display: inline-block;
+    color: white;
+    font-size: 25px;
+  }
+  
+  .about_details_title{
+    display: inline-flex;
+    color: $main-color;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .about_details_value{
+    display: inline-block;
+    
+    font-size: 16px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+    
+    .aboutdetails{
+        display: block;
+        align-items: center;  
+        margin-left: -15%;        
+        margin-right: -10%;    
+            
+          .about_details_icon{
+            display: block;
+            align-items: center;    
+             margin: auto;
+    
+
+          }
+          
+          .about_details_title{
+            display: block;
+            text-align: center;
+            float: none;   
+
+          }
+          
+          .about_details_value{
+            display: block;
+            text-align: center;
+            margin: auto;
+              
+          
+          }
+        
+        }
+}

@@ -1,0 +1,21 @@
+@import '../../../style/App.scss';
+
+
+.contact__info_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  img {
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-style: bold;
+  }
+}

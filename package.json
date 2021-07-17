@@ -1,0 +1,49 @@
+{
+  "name": "neerajdhurandher",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://neerajdhurandher.tk",
+  "dependencies": {
+    "@material-ui/core": "^4.12.1",
+    "@material-ui/icons": "^4.11.2",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "emailjs-com": "^2.6.4",
+    "node-sass": "^4.14.1",
+    "object-assign": "^4.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-flexbox-grid": "^2.1.2",
+    "react-id-swiper": "^3.0.0",
+    "react-masonry-css": "^1.0.14",
+    "react-reveal": "^1.2.2",
+    "react-rounded-image": "^2.0.13",
+    "react-scripts": "3.4.1",
+    "react-scroll": "^1.7.16",
+    "swiper": "^5.4.0",
+    "typescript": "^4.3.5",
+    "typewriter-effect": "^2.18.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

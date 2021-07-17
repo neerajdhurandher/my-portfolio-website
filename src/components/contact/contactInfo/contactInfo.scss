@@ -1,0 +1,16 @@
+@import '../../../style/App.scss';
+
+
+.contact__info {
+  width: 100%;
+  padding-top: 10px;
+  color: white;
+  background-color: rgb(27, 26, 26);
+}
+
+@media screen and (max-width : 1000px) {
+  .contact__info {
+  padding: 10px;
+  }
+
+}
