@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import "./button.scss";
 
 const hero = (props) => (
-  <div className="button">
+  <div className="button" >
     <Link
       className="button-link"
       to={props.target}

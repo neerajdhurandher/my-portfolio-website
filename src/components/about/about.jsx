@@ -16,7 +16,7 @@ import rungtalogo from "../../assets/about/rungta_logo.png";
 import shakuntalalogo from "../../assets/about/shakuntala_logo.png";
 
 
-// let resume_link = "https://drive.google.com/drive/folders/1ShFkqKW3gq7juFDiva4vflZizQVbIm82";
+let resume_link = "https://drive.google.com/drive/folders/1nc_JnFrAl7OOq1ZfSaRa2EqV0mGgM62K";
 let emaillink = "mailto:websiteneeraj@gmail.com?subject = Feedback From Website&body = Message";
 let phonelink = "tel:7224010437";
 let homelink = "https://goo.gl/maps/jQrLPbbSMJz7MiFx6";
@@ -26,7 +26,7 @@ function refreshPage() {
 }
 
 let downloadResume = () => {
-  fetch('https://firebasestorage.googleapis.com/v0/b/fir-1-98253.appspot.com/o/BE%20CT%20Time%20Table%2FBE_CT_Time_Table.pdf?alt=media&token=e516ed7a-2f0e-4d04-9cc0-747e979eda92')
+  fetch('https://drive.google.com/drive/folders/1nc_JnFrAl7OOq1ZfSaRa2EqV0mGgM62K')
     .then(response => {
       response.blob().then(blob => {
         let url = window.URL.createObjectURL(blob);
@@ -52,8 +52,13 @@ const about = () => (
             <p className="font20 "> Download my CV </p>
           </Col>
           <Col md={12} lg={3}>
-            <div className="resume_dow_btn" >
-              <Button label="Download" onClick={downloadResume} />
+            <div className="resume_dow_btn" onClick={()=> window.open(resume_link, "_blank")} >
+              {/* <Button label="Download" onClick={downloadResume} /> */}
+              {/* <Button label="Download" openlink={{resume_link}} /> */}
+              <div className = " button button-link ">
+                <p>Download</p>
+              </div>
+              
             </div>
           </Col>
         </Row>
