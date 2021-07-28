@@ -4,8 +4,8 @@ import "./about.scss";
 
 
 // Components
-import TeamBox from './teamBox';
-import OtherIntrestInfo from "./teamInfo";
+import EduWorkBox from './eduWorkBox';
+import OtherIntrestInfo from "./itemInfo";
 import EventsScrollView from "../events/eventSwiper";
 import AboutDetails from "./aboutdetails";
 import Button from "../ui-components/button/button";
@@ -109,16 +109,16 @@ const about = () => (
         <p className="some-heading-full-display">WORK</p>
       </div>
 
-      <TeamBox avatar={atglogo} name="Across The Globe (ATG)" name_last="" job="Android Developer Intern " year="JUN - DEC 2021" link="https://www.atg.world/" />
+      <EduWorkBox avatar={atglogo} name="Across The Globe (ATG) , Bengaluru" name_last="" job="Android Developer Intern " year="JUN - DEC 2021" link="https://www.atg.world/" />
     
 
       <div>
         <p className="some-heading-full-display">Education</p>
       </div>
     
-      <TeamBox avatar={rungtalogo} name="Rungta College Of Engineering" name_last="and Technology , Bhilai" job="B.E. (CSE)" year="2018-2022" link="https://www.rungta.ac.in/" />
+      <EduWorkBox avatar={rungtalogo} name="Rungta College Of Engineering" name_last="and Technology , Bhilai" job="B.E. (CSE)" year="2018-2022" link="https://www.rungta.ac.in/" />
 
-      <TeamBox avatar={shakuntalalogo} name="Shakuntala Vidyalaya , Bhilai" name_last="" job="12th & 10th" year="2018 & 2016" link="http://www.shakuntalavidyalaya.edu.in/" />
+      <EduWorkBox avatar={shakuntalalogo} name="Shakuntala Vidyalaya , Bhilai" name_last="" job="12th & 10th" year="2018 & 2016" link="http://www.shakuntalavidyalaya.edu.in/" />
      
       <div>
         <p className="some-heading-full-display">Other Intrests</p>

@@ -1,9 +1,9 @@
 import React from "react";
 // SCSS
-import "./teamInfo.scss";
+import "./itemInfo.scss";
 
 const about = () => (
-  <div className="team__info left" >
+  <div className="item_info left" >
     <div>
       <h4 className="font30 weight800">Drummer</h4>
       <h4 className="font30 weight800">Video Editor</h4>

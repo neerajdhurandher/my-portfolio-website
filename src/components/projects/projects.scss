@@ -2,9 +2,16 @@
 
 .projects {
   background-color: $light-color;
-  padding: 60px 0;
+  padding: 10px 0;
   color: white;
   background-color: rgb(27, 26, 26);
+
+
+  .swiper_div{
+    margin: "0 8%";
+    border: 2px solid #FFE600;
+
+  }
 }
 
 @media screen and (max-width: 990px) {

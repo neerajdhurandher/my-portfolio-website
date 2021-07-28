@@ -30,7 +30,7 @@ class Blog extends React.Component {
         id: "1",
         title: "Yaari",
         description: "Fully Funcional Social Media App",
-        uselang : "Android Java Firebase",
+        uselang : "Android, Java, Firebase",
         date: "September 2020",
         gihubLink:"https://github.com/neerajdhurandher/Yaari/tree/master",
       },
@@ -39,7 +39,7 @@ class Blog extends React.Component {
         id: "2",
         title: "Upasthiti",
         description: "Students,Teachers Manage App",
-        uselang : "Android Java Firebase",
+        uselang : "Android, Java, Firebase",
         date: "December 2020",
         gihubLink:"https://github.com/neerajdhurandher/upasthiti",
       },
@@ -47,18 +47,18 @@ class Blog extends React.Component {
         image: mywebsitethumbnail,
         id: "3",
         title: "My Portfolio",
-        description: "This is about myself.",
-        uselang : "ReactJS",
+        description: "This website is about Me.",
+        uselang : "ReactJS, HTML, CSS, Bootstrap",
         date: "July 2021",
         gihubLink:"https://github.com/neerajdhurandher/my-portfolio-website/tree/master",
       },
       {
         image: imageSlogo,
         id: "4",
-        title: "Image Searching",
+        title: "Img Searcher",
         description: "Search and Download Images",
-        uselang : "Android Java RestAPI",
-        date: "June 202",
+        uselang : "Android, Java, RestAPI",
+        date: "May 2021",
         gihubLink:"https://github.com/neerajdhurandher/Neeraj_Image_Search",
       },
       
@@ -82,19 +82,19 @@ class Blog extends React.Component {
       loop: true,
       breakpoints: {
         1200: {
-          slidesPerView: 2.5,
+          slidesPerView: 1.6,
           spaceBetween: 30,
         },
         1024: {
-          slidesPerView: 2.5,
+          slidesPerView: 1.6,
           spaceBetween: 30,
         },
         768: {
-          slidesPerView: 2.2,
+          slidesPerView: 1.4,
           spaceBetween: 20,
         },
         500: {
-          slidesPerView: 1.5,
+          slidesPerView: 1.2,
           spaceBetween: 20,
         },
         320: {
@@ -109,7 +109,7 @@ class Blog extends React.Component {
         <div className="wrapper">
           <Title title="My Projects" />
           <p className="font18 weight500 padding20">Here are my some project by using different Languages , Platforms and Tecchnologies.</p>
-          <div style={{ border: "2px solid #FFE600"}} className="padding20">
+          <div className=" swiper_div padding20">
             <Swiper {...params}>{storiesRender}</Swiper>
           </div>
           <div className="flex-center padding30">

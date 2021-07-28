@@ -3,12 +3,12 @@ import Swiper from './swiper';
 //SCSS
 import "./eventSwiper.scss";
 
-const partners = () => (
-  <div id="partners">
+const events = () => (
+  <div id="events">
     <div className="event-container">
       <Swiper/>
     </div>
   </div>
 );
 
-export default partners;
+export default events;

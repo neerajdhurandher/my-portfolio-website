@@ -2,13 +2,13 @@ import React from "react";
 import { Row, Col } from "react-flexbox-grid";
 import ReactRoundedImage from "react-rounded-image";
 
-import "./teamBox.scss";
+import "./eduWorkBox.scss";
 
-const teamBox = (props) => (
+const eduWorkBox = (props) => (
 
   <div>
 
-    <div  className="team__box " onClick={() => window.open(props.link, "_blank")} >
+    <div  className="eduWork_Box " onClick={() => window.open(props.link, "_blank")} >
 
       <Row>
         <Col md={12} lg={4}>
@@ -26,7 +26,7 @@ const teamBox = (props) => (
         </Col>
 
         <Col md={12} lg={4}>
-          <div className="team__box-info"  >
+          <div className="eduWork_Box_info"  >
             <p className="font24 weight500">{props.name}</p>
             <p className="font24 weight500">{props.name_last}</p>
             <p className="font18 ">{props.job}</p>
@@ -50,4 +50,4 @@ const teamBox = (props) => (
 
 );
 
-export default teamBox;
+export default eduWorkBox;

@@ -274,7 +274,7 @@ p {
 .some-heading-full-display{
   padding:10px;
   margin-top:5%;
-  margin-left: 10%;
+  margin-left: 20%;
   margin-right: 20%;
   margin-bottom:5px;
   background-color: $main-color;
@@ -310,6 +310,10 @@ p {
   margin-right: 10%;
   border: 2px solid $main-color;
   background-color: transparent;
+}
+
+.text-yellow{
+  color: $main-color;
 }
 
 @media screen and (max-width:500px) {
