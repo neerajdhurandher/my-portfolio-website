@@ -14,8 +14,8 @@ class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      email: "",
+      user_name: "",
+      user_email: "",
       message: "",
       sending: false,
       successModal: false,
@@ -33,26 +33,25 @@ class Contact extends React.Component {
     e.preventDefault();
 
     var template_params = {
-      name: this.state.name,
-      email: this.state.email,
+      user_name: this.state.name,
+      user_email: this.state.email,
       message: this.state.message,
     };
 
 
+      //  EMAIL.JS API KEY IN FORMAT user_xxxxxxxxxxxxxxxxxx
+      let API_KEY = "user_3wyedjZDiCRhIZPqDztot";
 
-
-    // YOUR EMAIL.JS API KEY IN FORMAT user_xxxxxxxxxxxxxxxxxx
-    let API_KEY = "user_3wyedjZDiCRhIZPqDztot";
-
-    // YOUR EMAIL.JS TEMPLATE ID
-    let TEMPLATE_ID = "user_3wyedjZDiCRhIZPqDztot";
+      //  EMAIL.JS TEMPLATE ID
+      let TEMPLATE_ID = "template_pi4nywi";
   
+      // EMAIL.JS Service Id 
+      let SERVICE_ID = "service_mtgfuxj";
 
 
-
-    emailjs.send("default_service", TEMPLATE_ID, template_params, API_KEY).then(
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, template_params , API_KEY).then(
       function (response) {
-        console.log("response :- " + response);
+        console.log("response :- " + response.status);
         if (response.status === 200) {
           self.showSuccessModal();
         } else {

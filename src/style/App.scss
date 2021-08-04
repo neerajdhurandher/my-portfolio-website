@@ -316,6 +316,16 @@ p {
   color: $main-color;
 }
 
+.swiper-button-next {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
 @media screen and (max-width:500px) {
   
 }

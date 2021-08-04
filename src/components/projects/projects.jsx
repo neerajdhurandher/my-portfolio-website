@@ -6,6 +6,7 @@ import Button from "../ui-components/button/button";
 // SCSS
 import "./projects.scss";
 import "swiper/css/swiper.css";
+import '../../style/App.scss';
 
 // Assets
 
@@ -14,7 +15,9 @@ import upasthitilogo from "../../assets/projects/upasthiti_logo.jpg";
 import mywebsitethumbnail from "../../assets/projects/my_website_thumbnail.png";
 import imageSlogo from "../../assets/projects/image_searcher_logo.jpg";
 
-
+// icon 
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 
 // Components
@@ -30,43 +33,43 @@ class Blog extends React.Component {
         id: "1",
         title: "Yaari",
         description: "Fully Funcional Social Media App",
-        uselang : "Android, Java, Firebase",
+        uselang: "Android, Java, Firebase",
         date: "September 2020",
-        gihubLink:"https://github.com/neerajdhurandher/Yaari/tree/master",
+        gihubLink: "https://github.com/neerajdhurandher/Yaari/tree/master",
       },
       {
         image: upasthitilogo,
         id: "2",
         title: "Upasthiti",
         description: "Students,Teachers Manage App",
-        uselang : "Android, Java, Firebase",
+        uselang: "Android, Java, Firebase",
         date: "December 2020",
-        gihubLink:"https://github.com/neerajdhurandher/upasthiti",
+        gihubLink: "https://github.com/neerajdhurandher/upasthiti",
       },
       {
         image: mywebsitethumbnail,
         id: "3",
         title: "My Portfolio",
         description: "This website is about Me.",
-        uselang : "ReactJS, HTML, CSS, Bootstrap",
+        uselang: "ReactJS, HTML, CSS, Bootstrap",
         date: "July 2021",
-        gihubLink:"https://github.com/neerajdhurandher/my-portfolio-website/tree/master",
+        gihubLink: "https://github.com/neerajdhurandher/my-portfolio-website/tree/master",
       },
       {
         image: imageSlogo,
         id: "4",
         title: "Img Searcher",
         description: "Search and Download Images",
-        uselang : "Android, Java, RestAPI",
+        uselang: "Android, Java, RestAPI",
         date: "May 2021",
-        gihubLink:"https://github.com/neerajdhurandher/Neeraj_Image_Search",
+        gihubLink: "https://github.com/neerajdhurandher/Neeraj_Image_Search",
       },
-      
+
     ],
   };
 
   render() {
-   
+
     let storiesRender = null;
     if (this.state.stories) {
       storiesRender = this.state.stories.map((story) => (

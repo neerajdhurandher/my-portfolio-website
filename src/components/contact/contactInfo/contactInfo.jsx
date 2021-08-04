@@ -19,7 +19,7 @@ const contactInfo = () => (
         <Col xs={12} lg={3} className="contact__info">
           <ContactInfoBox
             icon={AdressPinIcon}
-            textLine1="Bhilai Chhatsisgarh "
+            textLine1="Bhilai Chhattisgarh "
             textLine2="India"
             link = "https://goo.gl/maps/jQrLPbbSMJz7MiFx6"
           />

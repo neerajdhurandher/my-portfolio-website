@@ -128,7 +128,7 @@ const about = () => (
         <Col md={6} lg={5}>
           <OtherIntrestInfo />
         </Col>
-        <Col md={10} lg={7}>
+        <Col md={6} lg={7}>
           <EventsScrollView />
         </Col>
       </Row>

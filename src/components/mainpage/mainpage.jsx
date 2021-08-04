@@ -10,10 +10,6 @@ import Button from '../ui-components/button/button';
 
 import my_photo from '../../assets/mainpage/my_photo.png';
 
-// let myphoto = "https://drive.google.com/file/d/1TwaLYcGmh576ZJV12p8ZERRe_20D85Fc/view?usp=sharing";
-
-
-
 
 const mainpage = () => (
   <div className="hero" id="mainpage">

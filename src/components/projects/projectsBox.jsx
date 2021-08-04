@@ -13,7 +13,7 @@ const blog = (props) => (
         <div className="project__image"
           onClick={() => window.open(props.article.gihubLink, "_blank")}
         >
-          <img src={props.article.image} alt="blog story" />
+          <img src={props.article.image} alt="project img" />
           <div className="project__hover flex-center">
             <h4 className="font30 weight800 text-center">CLICK FOR CODE</h4>
           </div>

@@ -20,52 +20,52 @@ class MutipleSlidesPerView extends React.Component {
       {
         id: "1",
         photo: repbulicDrum,
-        event_name:"Republic Day",
-        event_details:"Shakuntala 2017",
-        
+        event_name: "Republic Day",
+        event_details: "Shakuntala 2017",
+
       },
       {
-        
+
         id: "2",
         photo: vyomDrum,
-        event_name:"Vyom",
-        event_details:"Rungta 2020",
-        
+        event_name: "Vyom",
+        event_details: "Rungta 2020",
+
       },
       {
         id: "3",
         photo: swachDrum,
-        event_name:"Swatch Bharat",
-        event_details:"Shakuntala 2018",
-        
+        event_name: "Swatch Bharat",
+        event_details: "Shakuntala 2018",
+
       },
       {
         id: "4",
         photo: rangDrum,
-        event_name:"Ranganch Band",
-        event_details:"Rungta 2019",
-        
+        event_name: "Ranganch Band",
+        event_details: "Rungta 2019",
+
       },
       {
         id: "5",
         photo: clgEventDrum,
-        event_name:"College Event",
-        event_details:"Rungta 2019",
-        
+        event_name: "College Event",
+        event_details: "Rungta 2019",
+
       },
       {
         id: "6",
         photo: IndeDrum,
-        event_name:"Independance Day",
-        event_details:"Shakuntala 2017",
-        
+        event_name: "Independance Day",
+        event_details: "Shakuntala 2017",
+
       },
       {
         id: "7",
         photo: vanmaDrum,
-        event_name:"Van Mahotsav",
-        event_details:"Shakuntala 2017",
-        
+        event_name: "Van Mahotsav",
+        event_details: "Shakuntala 2017",
+
       },
     ],
   };
@@ -109,7 +109,16 @@ class MutipleSlidesPerView extends React.Component {
         },
       },
     };
-    return <Swiper {...params}>{partnersRender}</Swiper>;
+    return <Swiper
+      loop={true}
+      navigation={{
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }}
+      autoplay={{
+      delay: 1200,
+      disableOnInteraction: false
+      }} {...params}>{partnersRender}</Swiper>;
   }
 };
 export default MutipleSlidesPerView;
