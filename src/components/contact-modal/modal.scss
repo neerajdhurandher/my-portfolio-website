@@ -39,6 +39,21 @@
       align-items: center;
       justify-content: center;
 
+      .success_msg_heading{
+        
+        text-shadow: -1px 2px 0 #000,
+                          1px 2px 0 #000,
+                          1px -1px 0 #000,
+                          -1px -1px 0 #000;
+                                       
+        p{
+          font-size: 3rem;
+          font-weight: 700;
+          color: $main-color;
+         
+        }
+      }
+
       p {
         font-size: 1.5rem;
         color: #1E1E1E;

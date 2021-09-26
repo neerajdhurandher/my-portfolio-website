@@ -4,34 +4,29 @@
   padding: 60px 0;
   color: white;
   background-color: rgb(27, 26, 26);
-
-  .resume_dow_btn{
-    margin-top: 5%;
-    margin-left: 25%;
-    width: 50%;
-    height: 50%;
-    align-items: center;
-  }
-  .button-link {
-    background-color: $main-color;
-    border: 2px solid $main-color;
-    padding: 8px 20px;
-    cursor: pointer;
-    font-size: 1.8rem;
-    color: black;
-    p{
-     font-weight: 800;
-    }
-  }
-  .button-link:hover {
-    border: 2px solid $main-color;
-    background-color: transparent;
-    color: white;
-  }
-
 }
 p{
   text-align: center;
+}
+
+.resume_dow_btn {
+  background-color: $main-color;
+  border: 2px solid $main-color;
+  width: min-content;
+  height: min-content;
+  margin-top: 0;
+  margin-left: 30%;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: black;
+  border-radius: 10%;
+}
+.resume_dow_btn:hover {
+  border: 2px solid $main-color;
+  background-color: transparent;
+  color:white;
 }
 
 .about_box_li{
@@ -65,8 +60,8 @@ p{
     text-align: center;
   }
   .resume_dow_btn{
-    margin-top: 5%;    
-    margin-left: 25%;
+    margin-top: 8%;    
+    margin-left: 35%;
   }
   .about_box_title{
     text-align: center;

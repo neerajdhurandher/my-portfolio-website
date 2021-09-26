@@ -77,7 +77,7 @@ const mobileNav = (props) => (
             duration={500}
             onClick={props.closeMobileMenu}
           >
-            Projects
+            PROJECTS
           </Link>
         </li>
         <li className="flex-center">

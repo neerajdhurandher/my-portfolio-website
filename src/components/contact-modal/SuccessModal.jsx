@@ -4,7 +4,9 @@ import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutline
 
 const successModal = (props) => (
   <div className="sucess__modal">
+    <div className = "success_msg_heading">
     <p>Message Send  </p>
+    </div>
     <CheckCircleOutlineRoundedIcon style = {{color:"green" ,fontSize:"40px", marginTop:"4%"}}/>
     <p>
       Thank you for contact me.<br></br>I will respond soon.

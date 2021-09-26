@@ -10,9 +10,9 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import DeveloperModeIcon from '@material-ui/icons/DeveloperMode';
 
   const gihublink = "https://github.com/neerajdhurandher?tab=repositories"; 
-  const linkedinlink = "https://www.linkedin.com/in/neeraj-dhurandher-300208144";
+  const linkedinlink = "https://www.linkedin.com/in/neeraj-dhurandher";
   const youtubelink = "https://www.youtube.com/channel/UCkG3MafX2ivqD7qXyN9J-Xw";
-  const gfglink = "https://auth.geeksforgeeks.org/user/neerajdhurandar/profile";
+  const gfglink = "https://auth.geeksforgeeks.org/user/neerajdhurandar/practice";
 
 const contactSocial = () => (
 

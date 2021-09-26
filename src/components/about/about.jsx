@@ -16,7 +16,7 @@ import rungtalogo from "../../assets/about/rungta_logo.png";
 import shakuntalalogo from "../../assets/about/shakuntala_logo.png";
 
 
-let resume_link = "https://drive.google.com/drive/folders/1nc_JnFrAl7OOq1ZfSaRa2EqV0mGgM62K";
+let resume_link = "http://www.neerajdhurandher.tk/static/media/Neeraj%20Dhurandher%20Resume.pdf";
 let emaillink = "mailto:websiteneeraj@gmail.com?subject = Feedback From Website&body = Message";
 let phonelink = "tel:7224010437";
 let homelink = "https://goo.gl/maps/jQrLPbbSMJz7MiFx6";
@@ -53,12 +53,7 @@ const about = () => (
           </Col>
           <Col md={12} lg={3}>
             <div className="resume_dow_btn" onClick={()=> window.open(resume_link, "_blank")} >
-              {/* <Button label="Download" onClick={downloadResume} /> */}
-              {/* <Button label="Download" openlink={{resume_link}} /> */}
-              <div className = " button button-link ">
-                <p>Download</p>
-              </div>
-              
+              <p>Download</p>
             </div>
           </Col>
         </Row>
