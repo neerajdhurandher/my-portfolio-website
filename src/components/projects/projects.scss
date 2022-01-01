@@ -7,10 +7,26 @@
   background-color: rgb(27, 26, 26);
 
 
-  .swiper_div{
-    margin: "0 8%";
+  .project_div{
+    width: 75%;
+    margin: 3% auto;
     border: 2px solid #FFE600;
 
+  }
+
+  .my-masonry-grid {
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex;
+
+  }
+  .mint__gallery {
+    background-clip: padding-box;
+  }
+   
+  
+  .mint__gallery > div { 
+    margin-bottom: 30px;
   }
 }
 
@@ -18,4 +34,10 @@
   #projects { 
     text-align: center;
   }
+}
+@media screen and (max-width: 500px) {
+  .project_div{
+    width: 90%;
+  }
+
 }

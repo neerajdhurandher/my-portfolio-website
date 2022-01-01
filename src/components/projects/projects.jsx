@@ -1,6 +1,5 @@
-import React from "react";
-import Swiper from "react-id-swiper";
-import { Row, Col } from "react-flexbox-grid";
+import React, { useState, useRef } from 'react';
+import Masonry from "react-masonry-css";
 import Button from "../ui-components/button/button";
 
 // SCSS
@@ -14,20 +13,18 @@ import yaarilogo from "../../assets/projects/yaari_logo.png";
 import upasthitilogo from "../../assets/projects/upasthiti_logo.jpg";
 import mywebsitethumbnail from "../../assets/projects/my_website_thumbnail.png";
 import imageSlogo from "../../assets/projects/image_searcher_logo.jpg";
-
-// icon 
-import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import connectionslogo from "../../assets/projects/connections.png";
 
 
 // Components
 import Title from "../ui-components/title/title";
 import ProjectBox from "./projectsBox";
 
-class Blog extends React.Component {
-  state = {
+const ProjectPage = () => {
+
+  const state = {
     // LIST ARRAY OF PROJECTS
-    stories: [
+    projectItems: [
       {
         image: yaarilogo,
         id: "1",
@@ -35,93 +32,97 @@ class Blog extends React.Component {
         description: "Fully Funcional Social Media App",
         uselang: "Android, Java, Firebase",
         date: "September 2020",
-        gihubLink: "https://github.com/neerajdhurandher/Yaari/tree/master",
+        type : "app",
+        videoOrWebsiteLink : "",
+        gihubLink: "https://github.com/neerajdhurandher/Yaari",
       },
       {
-        image: upasthitilogo,
+        image: connectionslogo,
         id: "2",
-        title: "Upasthiti",
-        description: "Students,Teachers Manage App",
-        uselang: "Android, Java, Firebase",
-        date: "December 2020",
-        gihubLink: "https://github.com/neerajdhurandher/upasthiti",
+        title: "Connections",
+        description: "This is webbased Chatting app",
+        uselang: "ReactJS, Firebase, Chat Engien.io",
+        date: "October 2021",
+        type : "website",
+        videoOrWebsiteLink : "http://conections.tk",
+        gihubLink: "https://github.com/neerajdhurandher/Connections",
       },
       {
         image: mywebsitethumbnail,
         id: "3",
         title: "My Portfolio",
         description: "This website is about Me.",
-        uselang: "ReactJS, HTML, CSS, Bootstrap",
+        uselang: "ReactJS, HTML, CSS, Material UI",
         date: "July 2021",
-        gihubLink: "https://github.com/neerajdhurandher/my-portfolio-website/tree/master",
+        type : "website",
+        videoOrWebsiteLink : "http://neerajdhurandher.tk",
+        gihubLink: "https://github.com/neerajdhurandher/my-portfolio-website",
+      },
+      {
+        image: upasthitilogo,
+        id: "4",
+        title: "Upasthiti",
+        description: "Students,Teachers Manage App",
+        uselang: "Android, Java, Firebase",
+        date: "December 2020",
+        type : "app",
+        videoOrWebsiteLink : "",
+        gihubLink: "https://github.com/neerajdhurandher/upasthiti",
       },
       {
         image: imageSlogo,
-        id: "4",
+        id: "5",
         title: "Img Searcher",
         description: "Search and Download Images",
         uselang: "Android, Java, RestAPI",
         date: "May 2021",
+        type : "app",
+        videoOrWebsiteLink : "",
         gihubLink: "https://github.com/neerajdhurandher/Neeraj_Image_Search",
       },
 
     ],
   };
 
-  render() {
+  let projectsRender = null;
 
-    let storiesRender = null;
-    if (this.state.stories) {
-      storiesRender = this.state.stories.map((story) => (
-        <div key={story.id}>
-          <ProjectBox article={story} />
-        </div>
-      ));
-    }
-    const params = {
-      grabCursor: true,
-      slidesPerView: 1,
-      spaceBetween: 10,
-      loop: true,
-      breakpoints: {
-        1200: {
-          slidesPerView: 1.6,
-          spaceBetween: 30,
-        },
-        1024: {
-          slidesPerView: 1.6,
-          spaceBetween: 30,
-        },
-        768: {
-          slidesPerView: 1.4,
-          spaceBetween: 20,
-        },
-        500: {
-          slidesPerView: 1.2,
-          spaceBetween: 20,
-        },
-        320: {
-          slidesPerView: 1.2,
-          spaceBetween: 10,
-        },
-      },
-    };
-
-    return (
-      <div className="projects" id="projects">
-        <div className="wrapper">
-          <Title title="My Projects" />
-          <p className="font18 weight500 padding20">Here are my some project by using different Languages , Platforms and Tecchnologies.</p>
-          <div className=" swiper_div padding20">
-            <Swiper {...params}>{storiesRender}</Swiper>
-          </div>
-          <div className="flex-center padding30">
-            <Button label="Review" target={"contact"} />
-          </div>
-        </div>
+  if (state.projectItems) {
+    projectsRender = state.projectItems.map((story) => (
+      <div key={story.id}>
+        <ProjectBox data={story} />
       </div>
-    );
+    ));
   }
+
+  const itemBreakpoints = {
+    default: 1,
+    1100: 1,
+    700: 1,
+    500: 1,
+  };
+
+  return (
+    <div className="projects" id="projects">
+      <div className="wrapper">
+        <Title title="My Projects" />
+        <p className="font18 weight500 padding20">Here are my some project by using different Languages , Platforms and Tecchnologies.</p>
+
+        <div className=" project_div">
+
+          <Masonry breakpointCols={itemBreakpoints} className="my-masonry-grid" columnClassName="mint__gallery">
+            {projectsRender}
+          </Masonry>
+
+        </div>
+
+        <div className="flex-center padding30">
+          <Button label="Review" target={"contact"} />
+        </div>
+
+      </div>
+    </div>
+  );
 }
 
-export default Blog;
+
+export default ProjectPage;

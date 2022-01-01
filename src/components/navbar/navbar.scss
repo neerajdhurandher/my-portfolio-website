@@ -41,6 +41,9 @@
     }
   }
 }
+.open_mobile_nav{
+  background-color: $black-color;
+}
 .extraLargeNavbar {
   padding: 20px 0;
 }
@@ -49,6 +52,7 @@
 .mobile__navbar {
   height: 100%;
   position: fixed;
+  margin-top: 20%;
   top: 0;
   right: -100%;
   background-color: $black-color;
@@ -59,26 +63,22 @@
   
   .mobile__navbar-close {
     padding: 10px;
-    margin-right: 80%;
+    margin-left: 80%;
     cursor: pointer;
     
-    img {
-      min-width: 30px;
-      height: auto;
-    }
   }
   .mobile__navbar-logo {
     padding: 1%;
     cursor: pointer;
   }
   .mobile__navbar-menu {
-    padding-top: 10%;
+    padding-top: 5%;
     ul {
       li {
         cursor: pointer;
         color: $white-color;
         font-size: 2.5rem;
-        padding: 5% 0;
+        padding: 8% 0;
       }
       li:hover {
         color: $main-color;
@@ -90,6 +90,11 @@
   right: 0;
 }
 
+.small-nav{
+  margin-top: 16%;
+
+}
+
 // BACKDROP
 .backdrop {
   width: 100%;
@@ -97,6 +102,7 @@
   background-color: $black-color;
   opacity: 0.8;
   position: fixed;
+  margin-top: 20%;  
   top: 0;
   right: 0;
   z-index: 500;
@@ -104,6 +110,7 @@
 }
 .backdrop__open {
   display: block;
+  top: 20%;
 }
 
 // MEDIA QUERIES

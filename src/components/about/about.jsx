@@ -8,7 +8,7 @@ import EduWorkBox from './eduWorkBox';
 import OtherIntrestInfo from "./itemInfo";
 import EventsScrollView from "../events/eventSwiper";
 import AboutDetails from "./aboutdetails";
-import Button from "../ui-components/button/button";
+import CustomButton from "../ui-components/button/button";
 import Title from "../ui-components/title/title";
 // Assets
 import atglogo from "../../assets/about/atg_logo.png";
@@ -46,17 +46,11 @@ const about = () => (
     <div className="wrapper">
       <Title title="ABOUT ME." />
 
-      <div style={{ marginTop: "20px" }}>
-        <Row >
-          <Col md={12} lg={3}>
-            <p className="font20 "> Download my CV </p>
-          </Col>
-          <Col md={12} lg={3}>
-            <div className="resume_dow_btn" onClick={()=> window.open(resume_link, "_blank")} >
-              <p>Download</p>
-            </div>
-          </Col>
-        </Row>
+      <div>
+        <p className="font20 download_cv_text"> Download my CV </p>
+        <div className="resume_dow_btn" onClick={() => window.open(resume_link, "_blank")} >
+          <p>Download</p>
+        </div>
       </div>
 
       <div className="horizontal-line-full" >
@@ -66,10 +60,9 @@ const about = () => (
 
       {/* yellow box with contact details */}
       <div>
-        <div className="box-yellow-border" style={{ margin: "10px", paddingLeft: "10%", paddingRight: "10%", cursor: "pointer" }}>
+        <div className="box-yellow-border" style={{ margin: "10px", paddingLeft: "10%", paddingRight: "10%"}}>
 
           <Row>
-
             <Col md={12} lg={6}>
               <div  >
 
@@ -105,16 +98,16 @@ const about = () => (
       </div>
 
       <EduWorkBox avatar={atglogo} name="Across The Globe (ATG) , Bengaluru" name_last="" job="Android Developer Intern " year="JUN - DEC 2021" link="https://www.atg.world/" />
-    
+
 
       <div>
         <p className="some-heading-full-display">Education</p>
       </div>
-    
+
       <EduWorkBox avatar={rungtalogo} name="Rungta College Of Engineering" name_last="and Technology , Bhilai" job="B.E. (CSE)" year="2018-2022" link="https://www.rungta.ac.in/" />
 
       <EduWorkBox avatar={shakuntalalogo} name="Shakuntala Vidyalaya , Bhilai" name_last="" job="12th & 10th" year="2018 & 2016" link="http://www.shakuntalavidyalaya.edu.in/" />
-     
+
       <div>
         <p className="some-heading-full-display">Other Intrests</p>
       </div>

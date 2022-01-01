@@ -9,10 +9,10 @@ const successModal = (props) => (
     </div>
     <CheckCircleOutlineRoundedIcon style = {{color:"green" ,fontSize:"40px", marginTop:"4%"}}/>
     <p>
-      Thank you for contact me.<br></br>I will respond soon.
+      Thank you for contacting me.<br></br>I will respond soon.
     </p>
     <div role="button" tabIndex={0} className="modal__btn flex-center" onClick={props.closeModal} onKeyDown={props.closeModal}>
-      <p>Ok</p>
+      <p>OK</p>
     </div>
   </div>
 );
