@@ -90,7 +90,7 @@ body {
   color: $black-color;
   font-size: 1.5rem;
   overflow-x: hidden;
-
+  background-color: $bg-color;
   height: 500vh;
 
 
@@ -100,6 +100,9 @@ body {
   padding: 0 15px;
   height: 100%;
   margin: 0 auto;
+}
+.wrpper-max{
+  max-width: 1400px;
 }
 ul {
   padding: 0;
@@ -346,6 +349,31 @@ p {
         font-weight: 800;
       }
     }
+}
+
+// scoll bar css
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: $bg-color;
+  border: 2px solid #b4b4b4;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $bg-color; 
+  border-radius: 6px;
+  border-top: 2px solid #b4b4b4;
+  border-bottom: 2px solid #b4b4b4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $main-color; 
 }
 
 @media screen and (max-width:500px) {
