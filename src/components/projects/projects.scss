@@ -8,8 +8,8 @@
 
 
   .project_div{
-    width: 75%;
-    margin: 3% auto;
+    width: 95%;
+    margin: 2% auto;
     border: 2px solid #FFE600;
 
   }
@@ -30,6 +30,24 @@
   }
 }
 
+.more-project-div{
+  margin: 25% 30%;
+
+   .more-project-btn{
+    background-color: #FFE600;
+    border-radius: 10px;
+    padding: 5% 10%;
+    
+     .MuiSvgIcon-root{
+      width: 3em;
+      height: 3em;
+     }
+     .action-button-title{
+       font-size: 2rem;
+     }
+   }
+}
+
 @media screen and (max-width: 990px) {
   #projects { 
     text-align: center;
@@ -38,6 +56,22 @@
 @media screen and (max-width: 500px) {
   .project_div{
     width: 90%;
+  }
+
+  .more-project-div{
+    margin: 15% 15%;
+  
+     .more-project-btn{
+      padding: 2% 10%;
+
+       .MuiSvgIcon-root{
+        width: 2.5em;
+        height: 2.5em;
+       }
+       .action-button-title{
+         font-size: 2rem;
+       }
+     }
   }
 
 }

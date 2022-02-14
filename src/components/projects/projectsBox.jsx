@@ -6,6 +6,9 @@ import "./projectsBox.scss";
 import ActionButton from "./actionButton";
 import Tooltip from '../tooltip/tooltip.jsx'
 
+import AndroidIcon from '../../assets/projects/android-icon-48.png';
+import WebsiteIcon from '../../assets/projects/website-icon-48.png';
+
 function AppOrWebsite(props) {
   if (props.type == "app")
     return (
@@ -32,7 +35,12 @@ const ProjectBox = (props) => (
       </Col>
 
       <Col xs="6" sm="4">
-        <p className="font23 weight800 project_title">{props.data.title}</p>
+        <div className="project_title">
+          {/* <img src={(props.data.type === "app") ? AndroidIcon : WebsiteIcon} /> */}
+          <span>
+            <p className="font20 weight800 ">{props.data.title}</p>
+            </span>
+        </div>
         <div className="project_details">
           <div className="project__info">
             <p>{props.data.description}</p>

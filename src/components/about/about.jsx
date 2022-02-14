@@ -15,7 +15,7 @@ import Title from "../ui-components/title/title";
 import atglogo from "../../assets/about/atg_logo.png";
 import rungtalogo from "../../assets/about/rungta_logo.png";
 import shakuntalalogo from "../../assets/about/shakuntala_logo.png";
-
+import Resume from "../../assets/about/Neeraj _Dhurandher_Resume.pdf"
 
 let resume_link = "http://www.neerajdhurandher.tk/static/media/Neeraj%20Dhurandher%20Resume.pdf";
 let emaillink = "mailto:websiteneeraj@gmail.com?subject = Feedback From Website&body = Message";
@@ -23,33 +23,19 @@ let phonelink = "tel:7224010437";
 let homelink = "https://goo.gl/maps/jQrLPbbSMJz7MiFx6";
 
 
-let downloadResume = () => {
-  fetch('https://drive.google.com/drive/folders/1nc_JnFrAl7OOq1ZfSaRa2EqV0mGgM62K')
-    .then(response => {
-      response.blob().then(blob => {
-        let url = window.URL.createObjectURL(blob);
-        let a = document.createElement('a');
-        a.href = url;
-        a.download = 'neeraj_resume.pdf';
-        a.click();
-      });
-
-      console.log("clickeddddd");
-      // window.location.href = response.url;
-    });
-}
-
 const about = () => (
   <div id="about">
 
     <div className="wrapper">
-      
+
       <Title title="ABOUT ME." />
 
       <div>
         <p className="font20 download_cv_text"> Download my CV </p>
-        <div className="resume_dow_btn" onClick={() => window.open(resume_link, "_blank")} >
-          <p>Download</p>
+        <div className="resume_dow_btn"  >
+          <a href={Resume} download = "Neeraj Dhurandher Resume" >
+            Download
+          </a>
         </div>
       </div>
 
@@ -60,7 +46,7 @@ const about = () => (
 
       {/* yellow box with contact details */}
       <div>
-        <div className="box-yellow-border" style={{ margin: "10px", paddingLeft: "10%", paddingRight: "10%"}}>
+        <div className="box-yellow-border" style={{ margin: "10px", paddingLeft: "10%", paddingRight: "10%" }}>
 
           <Row>
             <Col md={12} lg={6}>
@@ -117,19 +103,19 @@ const about = () => (
         <p className="some-heading-full-display">Other Intrests</p>
       </div>
 
-      </div>
+    </div>
 
-      <div className = "other-intrest-sec">
+    <div className="other-intrest-sec">
       <Row>
-        <Col md={6} lg={5}>
+        <Col xs={6} md={4}>
           <OtherIntrestInfo />
         </Col>
-        <Col md={6} lg={7}>
+        <Col xs={12} md={8}>
           <EventsScrollView />
         </Col>
       </Row>
-      </div>
-   
+    </div>
+
   </div>
 );
 

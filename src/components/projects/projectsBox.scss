@@ -1,23 +1,24 @@
 @import '../../style/App.scss';
 
 .project__box {
-width: max-content;
+  width: max-content;
   position: relative;
   margin: 5% auto;
-  padding: 3%;
+  padding: 2%;
   border-radius: 10px;
   color: #000;
  background-color: $white-color;
 
   .project__image {
-    width: 240px;
-    height: 240px;
+    width: 180px;
+    height: 180px;
     display: flex;
     margin-top: 5%;
-    margin-left: 10%;
+    margin-left: 5%;
     justify-content: center;
     background-color: #000;
     border-radius: 10px;
+    border: 2px solid black;
 
 
     img {
@@ -37,7 +38,27 @@ width: max-content;
     color: $main-color;
     background-color: $bg-color;
     border-radius: 10px;
-    padding: 2%;
+    padding: 5% 10%;
+    
+    img{
+      width: 3rem;
+      height: 3rem;
+      display: inline-flex;
+      align-self: center;
+    }
+    span{
+      display: inline-flex;
+      text-align: center;
+      margin-left: 5%;
+
+      p{
+        font-family:'Times New Roman', Times, serif;
+        margin: auto;
+        color: $main-color;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
   }
 
   .project_details{
