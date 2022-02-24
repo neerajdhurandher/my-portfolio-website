@@ -22,38 +22,43 @@
     }
 
 
-    p:nth-child(1){
+    .title-p{
+      font-size: 2.6rem;
+      font-weight: 600;
       margin-top: 10%;
       color:$main-color;
+    }
+    .tag-p{
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-top: 3%;
+      color:$white-color;
     }
 
   }
 
-  @media screen and (max-width: 990px) {
+  @media screen and (max-width: 770px) {
 
     .skills__box {
       position: relative;
-      max-width: 1800px;
+      max-width: 250px;
       height: auto;
       margin: 10% auto;
-      cursor: pointer;
       padding: 3%;
-      border-radius: 15px;
-      border: 2px solid $main-color;
       img {
         width: 95%;
-        margin: auto;
-        height: auto;
-        border-radius: 15px;
-        box-shadow: 2px 2px 4px rgb(185, 179, 179);
-        
       }
       img:hover{
         transform: scale(1.04);
       }
 
-      p:nth-child(1){
-        font-size:2.6rem;
+      .title-p{
+        font-size: 2.4rem;
+        font-weight: 550;
+      }
+      .tag-p{
+        font-size: 1.6rem;
+        font-weight: 500;
       }
     }
 

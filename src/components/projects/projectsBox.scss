@@ -2,21 +2,21 @@
 
 .project__box {
   width: max-content;
-  position: relative;
-  margin: 5% auto;
+  // position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 6% auto;
   padding: 2%;
   border-radius: 10px;
   color: #000;
- background-color: $white-color;
+  background-color: $white-color;
 
   .project__image {
     width: 180px;
-    height: 180px;
+    height: 220px;
     display: flex;
-    margin-top: 5%;
-    margin-left: 5%;
-    justify-content: center;
-    background-color: #000;
+    margin: 10% auto;
+    background-color: black;
     border-radius: 10px;
     border: 2px solid black;
 
@@ -33,31 +33,20 @@
 
   .project_title {
     text-transform: uppercase;
+    margin: auto 5%;
     margin-top: 2%;
     text-align :center;
     color: $main-color;
     background-color: $bg-color;
     border-radius: 10px;
-    padding: 5% 10%;
+    padding: 2% 10%;
     
-    img{
-      width: 3rem;
-      height: 3rem;
-      display: inline-flex;
-      align-self: center;
-    }
-    span{
-      display: inline-flex;
+    p{
+      font-family:'Times New Roman', Times, serif;
+      margin: auto;
+      color: $main-color;
       text-align: center;
-      margin-left: 5%;
-
-      p{
-        font-family:'Times New Roman', Times, serif;
-        margin: auto;
-        color: $main-color;
-        text-align: center;
-        text-transform: uppercase;
-      }
+      text-transform: uppercase;
     }
   }
 
@@ -65,40 +54,78 @@
     border: 2px solid black;
     border-radius: 10px;
     margin-top: 3%;
-  }
-
-  .project__info {
-    align-items: center;
+    margin-bottom: 3%;
     padding: 3%;  
     
-    p{
-      font-size: 1.8rem;
-      font-weight: 800;
+    .project__info {
+      align-items: center;
+      
+      p{
+        font-size: 1.6rem;
+        font-weight: 800;
+      }
     }
-  }
-  .action-buttons-div{
-    margin: auto 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .action-button{
-    margin: 2% 5%;
+    .action-buttons-div{
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .action-button{
+      margin: 2% 3%;
+    }
   }
 
   
 }
 
+.project__box:hover{
+  transform: scale(1.02);
+}
 
-@media screen and (max-width: 990px) {
+
+@media screen and (max-width: 1100px) {
   .project__box {
     width: 90%;
+
     .project__image {
-      width: 250px;
-      height: 250px;
+      margin: 25% 5% ;
+      width: 160px;
+      height: 180px;
     }
+    .project_title{
+      margin: auto 10%;
+      padding: 2%;
+      p{
+        font-size: 1.8rem;
+      }
+    }
+    .project_details{
+      margin: 3%;
+
+      .project__info {
+        padding: 3%; 
+        
+        p{
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+      }
 
   }
+  }
+
+}
+@media screen and (max-width: 770px) {
+  .project__box {
+    width: 90%;
+
+    .project__image {
+      margin: 5% auto ;
+      width: 180px;
+      height: 180px;
+    }
+  }  
 
 }
 
@@ -106,33 +133,11 @@
   .project__box {
     width: 90%;
     .project__image {
-      width: 200px;
-      height: 200px;
-      margin: 3% auto;
-      margin-top: 2%;
-      margin-left: 5%;
+      margin: 2% auto ;
     }
-    .project__info {
-      align-items: center;
-      padding: 3%;  
-      
-      p{
-        font-size: 1.5rem;
-        font-weight: 600;
-      }
-    }
-
-  }
-
-}
-
-@media screen and (max-width: 400px) {
-  .project__box {
-    margin: 3% auto;
-    padding: 1%;
-    .project__image {
-      width: 200px;
-      height: 200px;
+    .project_title{
+      margin: auto 10%;
+      padding: 2%;
     }
 
   }

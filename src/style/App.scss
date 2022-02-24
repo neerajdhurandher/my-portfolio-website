@@ -224,6 +224,9 @@ h1,h2,h3,h4,h5,h6 {
 .font20 {
   font-size: 2rem;
 }
+.font22{
+  font-size: 2.2rem;
+}
 .font23 {
   font-size: 2.3rem;
 }
@@ -354,7 +357,7 @@ p {
 // scoll bar css
 
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 15px;
 }
 
 /* Track */

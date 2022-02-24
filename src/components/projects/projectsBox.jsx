@@ -1,5 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-flexbox-grid";
+import Fade from 'react-reveal/Fade';
+
 
 import "./projectsBox.scss";
 
@@ -25,41 +27,45 @@ function AppOrWebsite(props) {
 }
 
 const ProjectBox = (props) => (
-  <div className="project__box">
+  <div>
+    <Fade left duration={1200}>
+      <div className="project__box">
 
-    <Row>
-      <Col xs="6" sm="4">
-        <div className="project__image">
-          <img src={props.data.image} alt="project img" />
-        </div>
-      </Col>
-
-      <Col xs="6" sm="4">
-        <div className="project_title">
-          {/* <img src={(props.data.type === "app") ? AndroidIcon : WebsiteIcon} /> */}
-          <span>
-            <p className="font20 weight800 ">{props.data.title}</p>
-            </span>
-        </div>
-        <div className="project_details">
-          <div className="project__info">
-            <p>{props.data.description}</p>
-            <p>{props.data.uselang}</p>
-            <p>{props.data.date}</p>
-          </div>
-
-          <div className="action-buttons-div">
-            <div className="action-button">
-              <ActionButton type={"github"} name={"Code Base"} link={props.data.gihubLink} />
+        <Row>
+          {/* <Col xs="6" sm="4"> */}
+          <Col md={5}>
+            <div className="project__image">
+              <img src={props.data.image} alt="project img" />
             </div>
-            <div className="action-button">
-              <AppOrWebsite type={props.data.type} link={props.data.videoOrWebsiteLink} />
-            </div>
-          </div>
-        </div>
-      </Col>
-    </Row>
+          </Col>
 
+          {/* <Col xs="6" sm="4"> */}
+          <Col md={7}>
+            <div className="project_title">
+              <p className="font20 weight800 ">{props.data.title}</p>
+            </div>
+            <div className="project_details">
+              <div className="project__info">
+                <p>{props.data.description}</p>
+                <p>{props.data.uselang}</p>
+                <p>{props.data.date}</p>
+              </div>
+
+              <div className="action-buttons-div">
+                <div className="action-button">
+                  <ActionButton type={"github"} name={"Code Base"} link={props.data.gihubLink} />
+                </div>
+                <div className="action-button">
+                  <AppOrWebsite type={props.data.type} link={props.data.videoOrWebsiteLink} />
+                </div>
+              </div>
+
+            </div>
+          </Col>
+        </Row>
+
+      </div>
+    </Fade>
   </div>
 );
 

@@ -25,11 +25,9 @@ import ActionButton from "./actionButton";
 function ProjectType(props) {
   if (props.prams.type == "more-projects") {
     return (
-      <div className="more-project-div">
         <div className="more-project-btn">
           <ActionButton type={"github"} name={"More Projects"} link={props.prams.gihubLink} />
         </div>
-      </div>
     )
   } else {
     return (
@@ -58,7 +56,7 @@ const ProjectPage = () => {
         image: connectionslogo,
         id: "2",
         title: "Connections",
-        description: "This is web based Chatting app",
+        description: "This is web based Chatting App",
         uselang: "ReactJS, Firebase, Chat Engien.io",
         date: "October 2021",
         type: "website",
@@ -66,15 +64,15 @@ const ProjectPage = () => {
         gihubLink: "https://github.com/neerajdhurandher/Connections",
       },
       {
-        image: mywebsitethumbnail,
+        image: imageSlogo,
         id: "3",
-        title: "My Portfolio",
-        description: "This website is about Me.",
-        uselang: "ReactJS, HTML, CSS, Material UI",
-        date: "July 2021",
-        type: "website",
-        videoOrWebsiteLink: "http://neerajdhurandher.tk",
-        gihubLink: "https://github.com/neerajdhurandher/my-portfolio-website",
+        title: "Img Searcher",
+        description: "Search and Download Images",
+        uselang: "Android, Java, RestAPI",
+        date: "May 2021",
+        type: "app",
+        videoOrWebsiteLink: "",
+        gihubLink: "https://github.com/neerajdhurandher/Neeraj_Image_Search",
       },
       {
         image: upasthitilogo,
@@ -88,15 +86,15 @@ const ProjectPage = () => {
         gihubLink: "https://github.com/neerajdhurandher/upasthiti",
       },
       {
-        image: imageSlogo,
+        image: mywebsitethumbnail,
         id: "5",
-        title: "Img Searcher",
-        description: "Search and Download Images",
-        uselang: "Android, Java, RestAPI",
-        date: "May 2021",
-        type: "app",
-        videoOrWebsiteLink: "",
-        gihubLink: "https://github.com/neerajdhurandher/Neeraj_Image_Search",
+        title: "My Portfolio",
+        description: "This website is about Me.",
+        uselang: "ReactJS, NPMJS, SCSS, Material UI",
+        date: "July 2021",
+        type: "website",
+        videoOrWebsiteLink: "http://neerajdhurandher.tk",
+        gihubLink: "https://github.com/neerajdhurandher/my-portfolio-website",
       },
       {
         image: "",
@@ -144,9 +142,9 @@ const ProjectPage = () => {
 
       </div>
 
-      <div className="flex-center padding30">
+      {/* <div className="flex-center padding30">
         <Button label="Review" target={"contact"} />
-      </div>
+      </div> */}
 
 
     </div>
