@@ -45,7 +45,7 @@ const ProjectPage = () => {
         image: yaarilogo,
         id: "1",
         title: "Yaari",
-        description: "Fully Funcional Social Media App",
+        description: "Fully Functional Social Media App",
         uselang: "Android, Java, Firebase",
         date: "September 2020",
         type: "app",
@@ -57,7 +57,7 @@ const ProjectPage = () => {
         id: "2",
         title: "Connections",
         description: "This is web based Chatting App",
-        uselang: "ReactJS, Firebase, Chat Engien.io",
+        uselang: "ReactJS, Firebase, Chat Engine.io",
         date: "October 2021",
         type: "website",
         videoOrWebsiteLink: "http://conections.tk",
@@ -93,7 +93,7 @@ const ProjectPage = () => {
         uselang: "ReactJS, NPMJS, SCSS, Material UI",
         date: "July 2021",
         type: "website",
-        videoOrWebsiteLink: "http://neerajdhurandher.tk",
+        videoOrWebsiteLink: "https://neerajdhurandher.me",
         gihubLink: "https://github.com/neerajdhurandher/my-portfolio-website",
       },
       {
@@ -132,7 +132,7 @@ const ProjectPage = () => {
     <div className="projects" id="projects">
       <div className="wrapper">
         <Title title="My Projects" />
-        <p className="font18 weight500 padding20">Here are my some project by using different Languages , Platforms and Tecchnologies.</p>
+        <p className="font18 weight500 padding20">Here are some of my project by using different Programming Languages , Platforms and Tecchnologies.</p>
       </div>
       <div className="project_div">
 

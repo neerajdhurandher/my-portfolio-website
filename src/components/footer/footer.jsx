@@ -26,7 +26,7 @@ const partnerBox = () => (
         </Col>  
       </Row>
       <div style={{color :"white" , textAlign:"center" , display:"inline"}} >
-      <p >Thankyou for Visiting in My Website &nbsp; <FavoriteIcon style = {{color:"red" , fontSize : "2rem" }}/> </p>
+      <p >Thank you for visiting my website &nbsp; <FavoriteIcon style = {{color:"red" , fontSize : "2rem" }}/> </p>
       
     </div>
     </div>

@@ -49,7 +49,7 @@ const MutipleSlidesPerView = () => {
       {
         id: "4",
         photo: rangDrum,
-        event_name: "Ranganch Band",
+        event_name: "Rangmanch Band",
         event_details: "Rungta 2019",
 
       },

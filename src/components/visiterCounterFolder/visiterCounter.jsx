@@ -25,22 +25,22 @@ const Visiter = () => {
     
     useEffect(() => {
 
-        console.log("after isVisited " + isVisited );
-        console.log("api call");
+        // console.log("after isVisited " + isVisited );
+        // console.log("api call");
 
 
         if (isVisited == "true") {
 
-            countapi.get(websiteTesting, key).then((result) => {
+            countapi.get(websiteReal, key).then((result) => {
 
                 if (result.status == 200) {
                     SetVisiterCount(result.value);
-                    console.log("already  " + result.value);
+                    // console.log("already  " + result.value);
                 }
                 else {
                     SetIsVisited("false");
                     SetVisiterCount(43);
-                    console.log("network error " + result.status);
+                    // console.log("network error " + result.status);
                 }
             });
 
@@ -48,20 +48,20 @@ const Visiter = () => {
 
         else if (isVisited == null) {
 
-            countapi.hit(websiteTesting, key).then((result) => {
+            countapi.hit(websiteReal, key).then((result) => {
 
                 if (result.status == 200) {
                     SetIsVisited("true");
                     SetVisiterCount(result.value);
                     localStorage.setItem(websiteReal, "true");
-                    console.log("hit");
+                    // console.log("hit");
 
 
                 }
                 else {
                     SetIsVisited("false");
                     SetVisiterCount(43);
-                    console.log("network error " + result.status);
+                    // console.log("network error " + result.status);
                 }
 
             });

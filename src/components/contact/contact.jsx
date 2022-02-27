@@ -113,7 +113,7 @@ class Contact extends React.Component {
         {modalRender}
         <div className="wrapper">
           <Title title="CONTACT ME." />
-          <p className="font15">For Projects , Colleboration , Events or Others Works , just drop a message here . I love to work with you guys .</p>
+          <p className="font15">For Projects, Collaboration, Events or Other Works, just drop a message here. I would love to work with you.</p>
    
           <Row className="padding40">
             <Col md={12} lg={6}>

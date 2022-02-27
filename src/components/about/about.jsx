@@ -18,7 +18,7 @@ import rungtalogo from "../../assets/about/rungta_logo.png";
 import shakuntalalogo from "../../assets/about/shakuntala_logo.png";
 import Resume from "../../assets/about/Neeraj _Dhurandher_Resume.pdf"
 
-let resume_link = "http://www.neerajdhurandher.tk/static/media/Neeraj%20Dhurandher%20Resume.pdf";
+let resume_link = "https://www.neerajdhurandher.me/static/media/Neeraj%20Dhurandher%20Resume.pdf";
 let emaillink = "mailto:websiteneeraj@gmail.com?subject = Feedback From Website&body = Message";
 let phonelink = "tel:7224010437";
 let homelink = "https://goo.gl/maps/jQrLPbbSMJz7MiFx6";
@@ -68,7 +68,7 @@ const about = () => (
             <Col md={12} lg={6}>
               <Fade right duration = {1000}>
                 <div >
-                  <AboutDetails type="website" title="Website " value="neerajdhurandher.tk" link="http://www.neerajdhurandher.tk" />
+                  <AboutDetails type="website" title="Website " value="neerajdhurandher.me" link="https://neerajdhurandher.me/" />
                   <p style={{ color: "transparent" }} >lorem</p>
                   <AboutDetails type="address" title="Address " value="Bhilai (CG), India" link={homelink} />
                   <p style={{ color: "transparent" }} >lorem</p>
@@ -87,7 +87,7 @@ const about = () => (
       </div>
 
       <Fade left duration = {1000}>
-        <EduWorkBox avatar={hashedinlogo} name="Hashedin by Deloitte, Bengaluru" name_last="" job="SDET Intern" year="MAR 2021 - Present" link="https://hashedin.com/" />
+        <EduWorkBox avatar={hashedinlogo} name="Hashedin by Deloitte, Bengaluru" name_last="" job="SDET Intern" year="MAR 2022 - Present" link="https://hashedin.com/" />
       </Fade>
 
       <Fade right duration = {1000}>
