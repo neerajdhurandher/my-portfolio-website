@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import Masonry from "react-masonry-css";
-import Button from "../ui-components/button/button";
 
 // SCSS
 import "./projects.scss";
@@ -12,8 +11,8 @@ import '../../style/App.scss';
 import yaarilogo from "../../assets/projects/yaari_logo.png";
 import upasthitilogo from "../../assets/projects/upasthiti_logo.jpg";
 import mywebsitethumbnail from "../../assets/projects/my_website_thumbnail.png";
-import imageSlogo from "../../assets/projects/image_searcher_logo.jpg";
 import connectionslogo from "../../assets/projects/connections.png";
+import udemySpringlogo from "../../assets/projects/udemy_spring_2.png";
 
 
 // Components
@@ -64,15 +63,15 @@ const ProjectPage = () => {
         gihubLink: "https://github.com/neerajdhurandher/Connections",
       },
       {
-        image: imageSlogo,
+        image: udemySpringlogo,
         id: "3",
-        title: "Img Searcher",
-        description: "Search and Download Images",
-        uselang: "Android, Java, RestAPI",
-        date: "May 2021",
-        type: "app",
-        videoOrWebsiteLink: "",
-        gihubLink: "https://github.com/neerajdhurandher/Neeraj_Image_Search",
+        title: "Udemy Backend",
+        description: "Rest APIs for user course management.",
+        uselang: "Spring Boot, Hibernate, MySQL",
+        date: "July 2022",
+        type: "website",
+        videoOrWebsiteLink: "https://udemy-backend-spring-boot.herokuapp.com/swagger-ui.html#",
+        gihubLink: "https://github.com/neerajdhurandher/udemy-backend-spring-boot",
       },
       {
         image: upasthitilogo,
@@ -131,8 +130,8 @@ const ProjectPage = () => {
   return (
     <div className="projects" id="projects">
       <div className="wrapper">
-        <Title title="My Projects" />
-        <p className="font18 weight500 padding20">Here are some of my project by using different Programming Languages , Platforms and Tecchnologies.</p>
+        <Title title="MY PROJECTS" />
+        <p className="font18 weight500 padding10" style={{textAlign:"left"}}>Here are some of my project by using different Programming Languages , Platforms and Tecchnologies.</p>
       </div>
       <div className="project_div">
 

@@ -25,10 +25,10 @@ const eduWorkBox = (props) => (
 
         <Col md={12} lg={4}>
           <div className="eduWork_Box_info"  >
-            <p className="font20 weight500">{props.name}</p>
-            <p className="font20 weight500">{props.name_last}</p>
-            <p className="font18 ">{props.job}</p>
-            <p className="font18 ">{props.year}</p>
+            <p className="font18 weight400">{props.name}</p>
+            <p className="font18 weight400">{props.name_last}</p>
+            <p className="font15 ">{props.job}</p>
+            <p className="font15 ">{props.year}</p>
           </div>
 
         </Col>

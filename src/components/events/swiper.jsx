@@ -19,7 +19,8 @@ import IndeDrum from "../../assets/events/IndeDrum.jpg";
 import rangDrum from "../../assets/events/rangDrum.jpg";
 import vanmaDrum from "../../assets/events/vanmaDrum.jpg";
 import swachDrum from "../../assets/events/swachDrum.png";
-import clgEventDrum from "../../assets/events/clgEventDrum.png";
+import clgEventDrum from "../../assets/events/clgEventDrum.JPG";
+import vizagDrum from "../../assets/events/vizagDrum.jpg";
 
 const MutipleSlidesPerView = () => {
   const state = {
@@ -41,9 +42,9 @@ const MutipleSlidesPerView = () => {
       },
       {
         id: "3",
-        photo: swachDrum,
-        event_name: "Swatch Bharat",
-        event_details: "Shakuntala 2018",
+        photo: vizagDrum,
+        event_name: "Coffee Museum",
+        event_details: "Vizag 2022",
 
       },
       {
@@ -72,6 +73,13 @@ const MutipleSlidesPerView = () => {
         photo: vanmaDrum,
         event_name: "Van Mahotsav",
         event_details: "Shakuntala 2017",
+
+      },
+      {
+        id: "8",
+        photo: swachDrum,
+        event_name: "Swatch Bharat",
+        event_details: "Shakuntala 2018",
 
       },
     ],

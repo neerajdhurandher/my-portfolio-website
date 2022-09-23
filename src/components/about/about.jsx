@@ -18,7 +18,6 @@ import rungtalogo from "../../assets/about/rungta_logo.png";
 import shakuntalalogo from "../../assets/about/shakuntala_logo.png";
 import Resume from "../../assets/about/Neeraj _Dhurandher_Resume.pdf"
 
-let resume_link = "https://www.neerajdhurandher.me/static/media/Neeraj%20Dhurandher%20Resume.pdf";
 let emaillink = "mailto:websiteneeraj@gmail.com?subject = Feedback From Website&body = Message";
 let phonelink = "tel:7224010437";
 let homelink = "https://goo.gl/maps/jQrLPbbSMJz7MiFx6";
@@ -32,13 +31,13 @@ const about = () => (
 
     <div className="wrapper">
 
-      <Title title="ABOUT ME." />
+      <Title title="ABOUT ME" />
 
       <div>
-        <p className="font20 download_cv_text"> Download my CV </p>
-        <div className="resume_dow_btn"  >
+        {/* <p className="font20 download_cv_text"> Download my CV </p> */}
+        <div className="resume_dow_btn text-center"  >
           <a href={Resume} download = "Neeraj Dhurandher Resume" >
-            Download
+            Download Resume
           </a>
         </div>
       </div>
@@ -50,7 +49,7 @@ const about = () => (
 
       {/* yellow box with contact details */}
       <div>
-        <div className="box-yellow-border" style={{ margin: "10px", paddingLeft: "10%", paddingRight: "10%" }}>
+        <div className="box-yellow-border contact-box" >
 
           <Row>
             <Col md={12} lg={6}>
@@ -87,7 +86,7 @@ const about = () => (
       </div>
 
       <Fade left duration = {1000}>
-        <EduWorkBox avatar={hashedinlogo} name="Hashedin by Deloitte, Bengaluru" name_last="" job="SDET Intern" year="MAR 2022 - Present" link="https://hashedin.com/" />
+        <EduWorkBox avatar={hashedinlogo} name="Hashedin by Deloitte, Bengaluru" name_last="" job="SDET" year="MAR 2022 - Present" link="https://hashedin.com/" />
       </Fade>
 
       <Fade right duration = {1000}>

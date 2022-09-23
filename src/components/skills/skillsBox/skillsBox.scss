@@ -3,16 +3,17 @@
   .skills__box {
     position: relative;
     max-width: 250px;
-    height: 300px;
+    height: 250px;
     margin: 5% auto;
     cursor: pointer;
     padding: 5%;
     border-radius: 15px;
     border: 2px solid $main-color;
     img {
-      width: 100%;
+      width: 95%;
       height: auto;
       border-radius: 15px;
+      margin: 0% auto;
       box-shadow: 2px 2px 4px rgb(185, 179, 179);
       
     }
@@ -23,13 +24,13 @@
 
 
     .title-p{
-      font-size: 2.6rem;
-      font-weight: 600;
+      font-size: 2.1rem;
+      font-weight: 550;
       margin-top: 10%;
       color:$main-color;
     }
     .tag-p{
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       font-weight: 500;
       margin-top: 3%;
       color:$white-color;
@@ -41,23 +42,23 @@
 
     .skills__box {
       position: relative;
-      max-width: 250px;
+      max-width: 200px;
       height: auto;
       margin: 10% auto;
       padding: 3%;
       img {
-        width: 95%;
+        width: 90%;
       }
       img:hover{
         transform: scale(1.04);
       }
 
       .title-p{
-        font-size: 2.4rem;
+        font-size: 2.1rem;
         font-weight: 550;
       }
       .tag-p{
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         font-weight: 500;
       }
     }

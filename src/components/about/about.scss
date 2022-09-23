@@ -15,7 +15,8 @@ p{
 }
 
 .resume_dow_btn {
-    width: min-content;
+  width: 25%;
+  min-width: max-content;
   height: min-content;
   margin-top: 2%;
   background-color: $main-color;
@@ -25,7 +26,7 @@ p{
   border-radius: 10px;
   
   a{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 800;
     color: black;
   }
@@ -73,19 +74,10 @@ p{
   float: left;
 }
 
-.about_box_title{
-  display: inline-flex;
-  // margin: auto;
-  color: $main-color;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.about_box_value{
-  display: inline-flex;
-  width: max-content;
-  // margin: auto;
-  font-size: 16px;
+.contact-box{
+  margin: 10px;
+  padding-left: 10%;
+  padding-right: 10%; 
 }
 
 
@@ -93,12 +85,20 @@ p{
   padding: 0% 5%;
   margin: 7% 0%;
 }
+@media screen and (max-width: 990px) {
+  .resume_dow_btn{
+    width: max-content;
+    margin: auto;
+    margin-top: 5%;
+  }
+}
 
 @media screen and (max-width: 500px) {
   #about {
     text-align: center;
   }
   .resume_dow_btn{
+    width: max-content;
     margin: auto;
     margin-top: 5%;
   }
