@@ -85,7 +85,7 @@ const about = () => (
       </div>
 
       <Fade left duration={1000}>
-        <EduWorkBox avatar={hashedin_logo} name="Hashedin by Deloitte, Bengaluru" name_last="" job="SDET" year="MAR 2022 - Present" link="https://hashedin.com/" />
+        <EduWorkBox avatar={hashedin_logo} name="Hashedin by Deloitte, Bengaluru" name_last="" job="Software Engineer" year="MAR 2022 - Present" link="https://hashedin.com/" />
       </Fade>
 
       <Fade right duration={1000}>
