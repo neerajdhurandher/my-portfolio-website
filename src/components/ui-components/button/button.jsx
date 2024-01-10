@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 // SCSS
 import "./button.scss";
 
-const hero = (props) => (
+const CustomButton = (props) => (
   <div className="button" >
     <Link
       className="button-link"
@@ -18,4 +18,4 @@ const hero = (props) => (
   </div>
 );
 
-export default hero;
+export default CustomButton;

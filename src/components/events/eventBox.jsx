@@ -9,8 +9,8 @@ const EventBox = (props) => (
     </div>
     
     <div className="event_photo_box-info">
-      <p className="font15 weight800">{props.event.event_name}</p>
-      <p className="font12 weight800">{props.event.event_details}</p>
+      <p className="event_name font15 weight800">{props.event.event_name}</p>
+      <p className="event_place font12 weight800">{props.event.event_details}</p>
     </div>
 
   </div>

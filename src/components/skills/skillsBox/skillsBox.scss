@@ -2,12 +2,12 @@
   
   .skills__box {
     position: relative;
-    max-width: 320px;
-    height: 320px;
-    margin: 15px auto;
+    max-width: 280px;
+    height: 300px;
+    margin: 5% auto;
     cursor: pointer;
     padding: 5%;
-    border-radius: 15 px;
+    border-radius: 15px;
     border: 2px solid $main-color;
     img {
       width: 100%;
@@ -50,7 +50,7 @@
 
     .skills__box {
       position: relative;
-      max-width: 250px;
+      max-width: 200px;
       height: auto;
       margin: 10% auto;
       cursor: pointer;
@@ -58,11 +58,18 @@
       border-radius: 15px;
       border: 2px solid $main-color;
       img {
-        width: 250px;
+        width: 180px;
         height: auto;
         border-radius: 15px;
         box-shadow: 2px 2px 4px rgb(185, 179, 179);
         
+      }
+      img:hover{
+        transform: scale(1.04);
+      }
+
+      p:nth-child(1){
+        font-size:2.6rem;
       }
     }
 

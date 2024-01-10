@@ -320,6 +320,8 @@ p {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
+  font-size: 50px;
+  color: #e0dcdc;
 }
 
 .swiper-button-next::after {
@@ -331,8 +333,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 2.5%;
-  padding-bottom: 2.5%;
+  padding: 1% ;
     .card{
       height: 10%;
       width: max-content;
@@ -340,10 +341,10 @@ p {
       background-color: $main-color;
       padding: 15px 20px;
       cursor: pointer;
-   p{
-      font-size: 2rem;
-      font-weight: 800;
-   }
+      p{
+        font-size: 2rem;
+        font-weight: 800;
+      }
     }
 }
 

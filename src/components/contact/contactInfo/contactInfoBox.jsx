@@ -2,11 +2,6 @@ import React from "react";
 
 import "./contactInfoBox.scss";
 
-
-
-
-
-
 const contactInfoBox = (props) => (
 
   <div className="contact__info_box" onClick={()=> window.open(props.link, "_blank")} >

@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-scroll";
 import Typewriter from "typewriter-effect";
 import { Row, Col } from "react-flexbox-grid";
 
 import "./mainpage.scss";
 import ContactSocial from '../contact/contactInfo/contactSocial';
+import MouseScrollAnim from "./mouseScrollAnim";
 import '../contact/contactInfo/contactSocial.scss';
 import Button from '../ui-components/button/button';
 
@@ -25,7 +27,7 @@ const mainpage = () => (
 
               <Typewriter className="typetext"
                 options={{
-                  strings: ['Android Developer', 'Web Developer' , 'Drummer'],
+                  strings: ['Android Developer', 'Web Developer', 'Drummer'],
                   autoStart: true,
                   loop: true,
                 }}
@@ -34,11 +36,14 @@ const mainpage = () => (
             <div className="weight800 font40">
               <ContactSocial />
             </div>
+            <Link activeClass="active-link" to="skills" spy={true} smooth={true} offset={-70} duration={500}>
+              <MouseScrollAnim />
+            </Link>
           </div>
         </Col>
         <Col md={6} lg={6}>
           <div className="hero-image" >
-            <img  src={my_photo} alt="hero" />
+            <img src={my_photo} alt="hero" />
           </div>
         </Col>
       </Row>

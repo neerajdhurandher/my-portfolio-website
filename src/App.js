@@ -13,7 +13,8 @@ import Contact from "./components/contact/contact";
 import ContactInfo from './components/contact/contactInfo/contactInfo';
 import ContactSocial from './components/contact/contactInfo/contactSocial';
 import Footer from "./components/footer/footer";
- 
+import VisiterCount from './components/visiterCounterFolder/visiterCounter';
+
 class App extends React.Component {
   state = {
     userIsScrolled: false,
@@ -56,17 +57,22 @@ class App extends React.Component {
     let mobileNavbar = <MobileNav />;
     if (this.state.mobileNavbarOpen) {
       mobileNavbar = (
-        <MobileNav isOpen={true} closeMobileMenu={this.closeMobileMenu} />
+        <MobileNav isOpen={true} closeMobileMenu={this.closeMobileMenu} userIsScrolled={this.state.userIsScrolled}
+        />
       );
     }
 
     return (
+
       <div className="App">
+
         {mobileNavbar}
         {backdrop}
         <DesktopNav
+          mobileNavbarOpen={this.state.mobileNavbarOpen}
           userIsScrolled={this.state.userIsScrolled}
           mobileMenuOpen={this.mobileMenuOpen}
+          closeMobileMenu={this.closeMobileMenu}
         />
 
         <MainPage />
@@ -74,10 +80,13 @@ class App extends React.Component {
         <About />
         <Projects />
         <Contact />
+        <VisiterCount />
         <ContactInfo />
         <ContactSocial />
         <Footer />
+
       </div>
+
     );
   }
 }

@@ -1,0 +1,50 @@
+@import '../../style/App.scss';
+
+  .ham-menu-btn {
+    position: relative;
+    display: inline;
+    justify-content: right;
+    align-items:flex-end;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+  }
+  .ham-menu-btn__burger {
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+  .ham-menu-btn__burger::before,
+  .ham-menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+  .ham-menu-btn__burger::before {
+    transform: translateY(-16px);
+  }
+  .ham-menu-btn__burger::after {
+    transform: translateY(16px);
+  }
+  /* ANIMATION */
+  .ham-menu-btn.open .ham-menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .ham-menu-btn.open .ham-menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .ham-menu-btn.open .ham-menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+  

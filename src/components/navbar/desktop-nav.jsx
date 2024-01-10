@@ -1,44 +1,72 @@
 import React from 'react';
 import { Link } from "react-scroll";
- // SCSS
+// SCSS
 import './navbar.scss';
+import './hamburger.scss'
+
 // Assets
-import LogoImgYellow from '../../assets/navbar/logo-yellow.svg';
 import LogoNeeraj from '../../assets/navbar/neeraj_logo_svg.svg';
-import MenuIcon from '@material-ui/icons/Menu';
+
+let menuOpen = false;
+
+function hamburgerEvent() {
+  if (!menuOpen) {
+    menuOpen = true;
+  } else {
+    menuOpen = false;
+  }
+
+};
+
+const SetMenuState = (props) => {
+  if (!props.setMenu && menuOpen) {
+    menuOpen = false;
+  }
+  return null;
+};
 
 const desktopNav = (props) => (
-  <nav className={`Navbar ${!props.userIsScrolled ? "extraLargeNavbar" : ""}`}>
+
+  // <nav className={`Navbar extraLargeNavbar  ${menuOpen ? "open_mobile_nav" : ""}`}>
+    
+    <nav className={`Navbar   ${!props.userIsScrolled ? "extraLargeNavbar" : ""}  ${menuOpen ? "open_mobile_nav" : ""}`}>
+
     <div className="wrapper flex-s-between">
       <div>
         <Link to="mainpage" spy={true} smooth={true} offset={0} duration={500}>
           <img src={LogoNeeraj} alt="logo" className="pointer" />
         </Link>
       </div>
-      <div className="mobile__menu" onClick={props.mobileMenuOpen}>
-        <MenuIcon alt="menu" style={{fontSize:"3.5rem"}}/>
+
+      <div className="mobile__menu" onClick = {hamburgerEvent} onClick={menuOpen ? props.closeMobileMenu : props.mobileMenuOpen}  >
+        {
+          <SetMenuState setMenu={props.mobileNavbarOpen} />
+        }
+        <div className={`ham-menu-btn ${menuOpen ? "open" : ""}`} onClick = {hamburgerEvent}  >
+          <div className="ham-menu-btn__burger"></div>
+        </div>
       </div>
-      
+
       <div className="desktop__menu">
         <ul className="flex-s-between">
           <li >
-          <Link activeClass="active-link" to = "mainpage" spy={true} smooth={true} offset={-70} duration={500}>
+            <Link activeClass="active-link" to="mainpage" spy={true} smooth={true} offset={-70} duration={500}>
               HOME
             </Link>
-            </li>
-            <li>
+          </li>
+          <li>
             <Link activeClass="active-link" to="about" spy={true} smooth={true} offset={-70} duration={500}>
               ABOUT
             </Link>
           </li>
-            <li>
+          <li>
             <Link activeClass="active-link" to="skills" spy={true} smooth={true} offset={-70} duration={500}>
               SKILLS
             </Link>
           </li>
           <li>
             <Link activeClass="active-link" to="projects" spy={true} smooth={true} offset={-70} duration={500}>
-            PROJECTS
+              PROJECTS
             </Link>
           </li>
           <li>

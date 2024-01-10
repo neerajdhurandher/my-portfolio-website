@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState, useRef } from 'react';
 import Swiper from "react-id-swiper";
+
 // SCSS
 import "swiper/css/swiper.css";
+import '../../style/App.scss';
+
 // Components
 import EventBox from "./eventBox";
+
+// icon 
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 // Assets
 import repbulicDrum from "../../assets/events/repbulicDrum.JPG";
@@ -14,8 +21,8 @@ import vanmaDrum from "../../assets/events/vanmaDrum.jpg";
 import swachDrum from "../../assets/events/swachDrum.png";
 import clgEventDrum from "../../assets/events/clgEventDrum.png";
 
-class MutipleSlidesPerView extends React.Component {
-  state = {
+const MutipleSlidesPerView = () => {
+  const state = {
     events: [
       {
         id: "1",
@@ -68,57 +75,93 @@ class MutipleSlidesPerView extends React.Component {
 
       },
     ],
+
+  };
+  const [swiper, setSwiper] = useState(null);
+ 
+  const ref = useRef(null);
+ 
+  const goNext = () => {
+    if (ref.current !== null && ref.current.swiper !== null) {
+      swiper.slideNext();
+    }
+  };
+ 
+  const goPrev = () => {
+    if (ref.current !== null && ref.current.swiper !== null) {
+      swiper.slidePrev();
+    }
   };
 
-  render() {
-    let partnersRender = null;
+  let eventsRender = null;
 
-    if (this.state.events) {
-      partnersRender = this.state.events.map((event) => (
-        <div key={event.id}>
-          <EventBox event={event} />
-        </div>
-      ));
-    }
+  if (state.events) {
+    eventsRender = state.events.map((event) => (
+      <div key={event.id}>
+        <EventBox event={event} />
+      </div>
+    ));
+  }
 
-    const params = {
-      grabCursor: true,
-      slidesPerView: 1,
-      spaceBetween: 10,
-      loop: true,
-      breakpoints: {
-        1200: {
-          slidesPerView: 2.5,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        868: {
-          slidesPerView: 1.5,
-          spaceBetween: 30,
-        },
-        640: {
-          slidesPerView: 1.2,
-          spaceBetween: 20,
-        },
-        320: {
-          slidesPerView: 1.2,
-          spaceBetween: 10,
-        },
+  const params = {
+    grabCursor: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   type: 'bullets',
+    //   clickable: true,
+    //   color :'#fffff',
+    // },
+    breakpoints: {
+      1200: {
+        slidesPerView: 2.5,
+        spaceBetween: 40,
       },
-    };
-    return <Swiper
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      868: {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+      },
+      640: {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+      },
+      400: {
+        slidesPerView: 1.3,
+        spaceBetween: 15,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+    },
+    renderPrevButton: () => 
+    <NavigateBeforeIcon className = "swiper-button-prev"  style={{fontSize:"50px", color :"#ffffff"}} onClick = {goPrev}/>,
+    renderNextButton: () => 
+    <NavigateNextIcon className = "swiper-button-next"  style={{fontSize:"50px", color :"#ffffff"}} onClick = {goNext}/>,
+  };
+  
+    return(
+    <>
+     <Swiper
+     ref={ref}
       loop={true}
       navigation={{
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
       }}
       autoplay={{
-      delay: 1200,
-      disableOnInteraction: false
-      }} {...params}>{partnersRender}</Swiper>;
-  }
+        delay: 2000,
+        disableOnInteraction: false
+      }}
+       {...params}>{eventsRender}</Swiper>      
+      </>
+    )
+
 };
 export default MutipleSlidesPerView;

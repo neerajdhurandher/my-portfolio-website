@@ -1,0 +1,34 @@
+@import '../../style/App.scss';
+
+.action-button-div{
+    width: max-content;
+    background-color: $main-color;
+    border-radius: 6px;
+    margin: 2%; 
+    padding: 3%;
+    cursor: pointer;
+    transform: scale(1);
+    display:inline-flex;
+    align-items: center; 
+    text-align: center;
+}
+
+.action-button-div:hover{
+    transform: scale(1.1);
+}
+
+.action-button-title{
+    font-size: 1.2rem;
+    font-weight: 550;
+    color: black;
+}
+
+.button_icon{
+    font-size: 2rem;
+    color: black;
+}
+@media screen and (max-width: 500px) {
+    .action-button-title{
+        font-size: 1rem;
+    }
+}

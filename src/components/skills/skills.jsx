@@ -16,6 +16,7 @@ import reactjslogo from "../../assets/skills_photos/reactjs_logo.png";
 import htmllogo from "../../assets/skills_photos/html_logo.png";
 import csslogo from "../../assets/skills_photos/css_logo.png";
 import javascriptlogo from "../../assets/skills_photos/javascript_logo.png";
+import mysqllogo from "../../assets/skills_photos/my_sql_logo.png";
 
 
 //Components
@@ -28,8 +29,8 @@ class Skills extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // PORTFOLIO PROJECTS
-      projects: [
+
+      skills: [
         {
           id: "1",
           preview: javalogo,
@@ -64,7 +65,7 @@ class Skills extends React.Component {
           id: "6",
           preview: kotlinlogo,
           title: "Kotlin",
-          tag: "Beginner",
+          tag: "Intermidiate",
         },
 
         {
@@ -87,6 +88,12 @@ class Skills extends React.Component {
         },
         {
           id: "10",
+          preview: mysqllogo,
+          title: "MySQL",
+          tag: "Intermidiate",
+        },
+        {
+          id: "11",
           preview: firebaselogo,
           title: "Firebase",
           tag: "Intermidiate",
@@ -106,8 +113,8 @@ class Skills extends React.Component {
 
   
   filterGallery = (target) => {
-    let projectsArr = [...this.state.projects];
-    let result = projectsArr;
+    let skillsArr = [...this.state.skills];
+    let result = skillsArr;
 
     this.setState({ filterResult: result});
   };
@@ -121,7 +128,6 @@ class Skills extends React.Component {
         <SkillsBox preview={project.preview} key={project.id} title={project.title} tag={project.tag} />
       ));
     }
-    // SKILLS GALLERY BREAKPOINTS
     const skillsBreakpoints = {
       default: 3,
       1100: 3,

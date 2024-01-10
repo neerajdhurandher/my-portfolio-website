@@ -2,11 +2,12 @@
 
 .event_photo__box {
   width: 250px;
-  height: 350px;
+  height: max-content;
   margin: 10% 10%;
+  padding-bottom: 10%;
   background-color: rgb(14, 13, 13);
-  border-radius: 10px;
-  box-shadow: 3px 2px 4px rgb(185, 179, 179);
+  border-radius: 5%;
+  border : 1px solid #fff;
 
 }
 
@@ -17,6 +18,9 @@
   opacity: 1;
   transform: scale(0.9);
   display: flex;
+  border-radius: 5%;
+  border : 1px solid rgb(128, 124, 124);
+  justify-content: center;
 }
 .event-photo:hover{
   transform: scale(0.95);
@@ -26,19 +30,18 @@
 
 .event_photo_box-info {
   background-color: $main-color;
-  position: absolute;
-  text-align: left;
-  // width: max-content;
-  height:max-content;
-  margin-top: 5%;
-  padding: 5px 20px;
-  // margin-left: -2%;
+  width: 70%;
+  margin: auto;
+  padding: 2%;
+  justify-content: center;
+  align-items: center;  
+  position: relative;
   border-radius: 10px;
 
-  p {
+}
+.event_name{
     color: $black-color;
-  }
-  p:nth-child(2) {
-    color: $black-color;
-  }
+}
+.event_place{
+  color: #0000009f;
 }

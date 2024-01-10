@@ -6,8 +6,6 @@ import Title from "../ui-components/title/title";
 
 import Modal from '../contact-modal/Modal';
 
-import { red } from "@material-ui/core/colors";
-
 import bg_img from "../../assets/contact/contact-coding-bg.jpg"
 
 class Contact extends React.Component {

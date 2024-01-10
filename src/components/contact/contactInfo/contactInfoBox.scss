@@ -11,6 +11,11 @@
 
   img {
     margin: 10px 0;
+    transform: scale(1.2);
+  }
+  
+  img:hover{
+    transform: scale(1.4);  
   }
 
   p {
