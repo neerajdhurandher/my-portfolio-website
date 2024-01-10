@@ -1,6 +1,6 @@
 @import '../../../style/App.scss';
 
-.social_contact_div{
+.social_contact_div {
   width: 100%;
   color: white;
   padding-top: 3%;
@@ -17,19 +17,15 @@
 }
 
 .contact__social:hover {
-  // filter: invert(77%) sepia(99%) saturate(652%) hue-rotate(354deg) brightness(98%) contrast(111%);
   transform: scale(3.2);
   color: #FFE600;
 }
 
-
-
 @media screen and (max-width: 990px) {
-
-
   .contact__social {
     text-align: center;
     width: 100%;
+
     img {
       margin: 0 auto;
     }
