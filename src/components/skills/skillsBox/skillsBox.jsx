@@ -8,8 +8,8 @@ const skillsBox = (props) => (
     <div className="skills__box ">
       <img className="skill_img" src={props.preview} alt="project" />
       <div className="text-center">
-        <p className="font30 weight800">{props.title}</p>
-        <p className="font18 weight500">{props.tag}</p>
+        <p className="title-p">{props.title}</p>
+        <p className="tag-p">{props.tag}</p>
       </div>
     </div>
   </Fade>

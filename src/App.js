@@ -10,10 +10,8 @@ import Skills from "./components/skills/skills";
 import About from "./components/about/about";
 import Projects from "./components/projects/projects";
 import Contact from "./components/contact/contact";
-import ContactInfo from './components/contact/contactInfo/contactInfo';
-import ContactSocial from './components/contact/contactInfo/contactSocial';
+import FooterContact from "./components/footer/footerContact";
 import Footer from "./components/footer/footer";
-import VisiterCount from './components/visiterCounterFolder/visiterCounter';
 
 class App extends React.Component {
   state = {
@@ -80,9 +78,7 @@ class App extends React.Component {
         <About />
         <Projects />
         <Contact />
-        <VisiterCount />
-        <ContactInfo />
-        <ContactSocial />
+        <FooterContact />
         <Footer />
 
       </div>

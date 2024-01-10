@@ -1,26 +1,37 @@
 @import '../../style/App.scss';
 
 .item_info {
-  max-width: 370px;
-  height: 420px;
-  margin: 0 auto;
-  margin-top: 60px;
-  position: relative;
+  width: max-content;
+  max-width: 80%;
+  height: 100%;
   border: 4px solid $light-color;
-  padding: 10%;
-  margin-bottom: 60px;
-
+  padding: 5%;
+  text-align: center;
   h4 {
-    padding-bottom: 20px;
-    text-align: center;
+    padding-bottom: 10%;
   } 
   h4:hover {
     color: $main-color;
     transition: 0.3s ease;
   }
-  p {
-    padding-bottom: 20px;
-  }
-  
-
 }
+
+  @media screen and (max-width: 1024px) {
+    .item_info{
+      max-width: 80%;
+      margin: auto;
+      h4{
+        font-size: 3rem;
+      }
+    }
+
+  }
+
+  @media screen and (max-width: 770px) {
+    .item_info{
+      max-width: 180%;
+      margin: auto 20%;
+      border: 2px solid $light-color;
+    }
+
+  }

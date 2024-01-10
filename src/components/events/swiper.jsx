@@ -49,7 +49,7 @@ const MutipleSlidesPerView = () => {
       {
         id: "4",
         photo: rangDrum,
-        event_name: "Ranganch Band",
+        event_name: "Rangmanch Band",
         event_details: "Rungta 2019",
 
       },
@@ -57,7 +57,7 @@ const MutipleSlidesPerView = () => {
         id: "5",
         photo: clgEventDrum,
         event_name: "College Event",
-        event_details: "Rungta 2019",
+        event_details: "Rungta 2020",
 
       },
       {
@@ -121,15 +121,19 @@ const MutipleSlidesPerView = () => {
       },
       1024: {
         slidesPerView: 2.2,
-        spaceBetween: 40,
+        spaceBetween: 20,
       },
-      868: {
+      860: {
+        slidesPerView: 1.8,
+        spaceBetween: 20,
+      },
+      770: {
         slidesPerView: 1.5,
         spaceBetween: 20,
       },
-      640: {
-        slidesPerView: 1.5,
-        spaceBetween: 20,
+      550: {
+        slidesPerView: 1.7,
+        spaceBetween: 15,
       },
       400: {
         slidesPerView: 1.3,

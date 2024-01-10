@@ -30,7 +30,7 @@ const ActionButton = (props) => {
     }
 
     return (
-        <div className="action-button-div" onClick={type() ? () => window.open(props.link, "_blank") : " "}>
+        <div className="action-button-div" onClick={type() ? () => window.open(props.link, "_blank") : null}>
             <ButtonType buttonType={props.type} buttonLink={props.link} />
             <p className="action-button-title"> &nbsp; {props.name} &nbsp;</p>
         </div>

@@ -1,0 +1,102 @@
+@import '../../style/App.scss';
+
+.popup-content {
+    margin: auto;
+    background: rgb(255, 255, 255);
+    width: 40%;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  .popup-overlay {
+    background-color: #1f1e1e0e;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+.popupmodal {
+    margin: auto;
+    width: 100%;
+    color: black;
+    z-index: 200;
+    border-radius: 8px;
+    background-color: white;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    text-align: center;
+}
+    .popupmodal > .popupheader {
+      width: 100%;
+      border-bottom: 1px solid gray;
+      font-size: 2.5em;
+      text-align: center;
+      padding: 5px;
+      color: #3AA3FB;
+      font-weight: 700;
+    }
+    .popupmodal > .video-container {
+      width: 95%;
+      display: flex;
+      align-items: center;
+      margin: 2%;
+      padding: 5 rem 5 rem;
+      border: 4px #3AA3FB solid;
+      border-radius: 8px;
+    }
+    .popupmodal > .popupactions {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 10px 5px;
+      margin: auto;
+      text-align: center;
+    }
+    .popupmodal > .close {
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        padding: 2px 5px;
+        line-height: 20px;
+        right: -10px;
+        top: 10px;
+        font-size: 32px;
+        background: #ffffff;
+        border-radius: 18px;
+        border: 1px solid #cfcece;
+      }
+   .button{
+     width: 10vh;
+     height: 5vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     border-radius: 8px ;
+     color: black;
+     margin-bottom: 2%;
+     font-weight: 600;
+     font-size: 1.8em;
+     background-color: $main-color;
+  }
+  .button:hover{
+     transform: scale(1.1);
+  }
+   
+   
+   @media screen and (max-width: 900px) {
+    .popup-content{
+      width: 70%;
+    }
+   }
+   
+   
+    @media screen and (max-width: 508px) {
+   
+  
+   
+    }
+    @media screen and (max-width: 450px) {
+   
+   
+   
+    }

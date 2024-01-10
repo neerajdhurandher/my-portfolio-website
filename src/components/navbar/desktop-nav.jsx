@@ -33,7 +33,7 @@ const desktopNav = (props) => (
 
     <div className="wrapper flex-s-between">
       <div>
-        <Link to="mainpage" spy={true} smooth={true} offset={0} duration={500}>
+        <Link to="mainpage" spy={true} smooth={true} offset={-70} duration={500}>
           <img src={LogoNeeraj} alt="logo" className="pointer" />
         </Link>
       </div>

@@ -12,44 +12,34 @@ import AboutDetails from "./aboutdetails";
 import CustomButton from "../ui-components/button/button";
 import Title from "../ui-components/title/title";
 // Assets
+import hashedinlogo from "../../assets/about/hashedin_logo.png"
 import atglogo from "../../assets/about/atg_logo.png";
 import rungtalogo from "../../assets/about/rungta_logo.png";
 import shakuntalalogo from "../../assets/about/shakuntala_logo.png";
+import Resume from "../../assets/about/Neeraj _Dhurandher_Resume.pdf"
 
-
-let resume_link = "http://www.neerajdhurandher.tk/static/media/Neeraj%20Dhurandher%20Resume.pdf";
+let resume_link = "https://www.neerajdhurandher.me/static/media/Neeraj%20Dhurandher%20Resume.pdf";
 let emaillink = "mailto:websiteneeraj@gmail.com?subject = Feedback From Website&body = Message";
 let phonelink = "tel:7224010437";
 let homelink = "https://goo.gl/maps/jQrLPbbSMJz7MiFx6";
 
+let drummer_title = "Drummer";
+let drummer_des = "Drumming is my hobby , I love to play drums in my free time. I am playing drums since my chilhood."
 
-let downloadResume = () => {
-  fetch('https://drive.google.com/drive/folders/1nc_JnFrAl7OOq1ZfSaRa2EqV0mGgM62K')
-    .then(response => {
-      response.blob().then(blob => {
-        let url = window.URL.createObjectURL(blob);
-        let a = document.createElement('a');
-        a.href = url;
-        a.download = 'neeraj_resume.pdf';
-        a.click();
-      });
-
-      console.log("clickeddddd");
-      // window.location.href = response.url;
-    });
-}
 
 const about = () => (
   <div id="about">
 
     <div className="wrapper">
-      
+
       <Title title="ABOUT ME." />
 
       <div>
         <p className="font20 download_cv_text"> Download my CV </p>
-        <div className="resume_dow_btn" onClick={() => window.open(resume_link, "_blank")} >
-          <p>Download</p>
+        <div className="resume_dow_btn"  >
+          <a href={Resume} download = "Neeraj Dhurandher Resume" >
+            Download
+          </a>
         </div>
       </div>
 
@@ -60,11 +50,11 @@ const about = () => (
 
       {/* yellow box with contact details */}
       <div>
-        <div className="box-yellow-border" style={{ margin: "10px", paddingLeft: "10%", paddingRight: "10%"}}>
+        <div className="box-yellow-border" style={{ margin: "10px", paddingLeft: "10%", paddingRight: "10%" }}>
 
           <Row>
             <Col md={12} lg={6}>
-              <Fade left >
+              <Fade left duration = {1000}>
                 <div>
                   <AboutDetails type="email" title="Email " value="websiteneeraj@gmail.com " link={emaillink} />
                   <p style={{ color: "transparent" }} >lorem</p>
@@ -76,9 +66,9 @@ const about = () => (
 
 
             <Col md={12} lg={6}>
-              <Fade right >
+              <Fade right duration = {1000}>
                 <div >
-                  <AboutDetails type="website" title="Website " value="neerajdhurandher.tk" link="http://www.neerajdhurandher.tk" />
+                  <AboutDetails type="website" title="Website " value="neerajdhurandher.me" link="https://neerajdhurandher.me/" />
                   <p style={{ color: "transparent" }} >lorem</p>
                   <AboutDetails type="address" title="Address " value="Bhilai (CG), India" link={homelink} />
                   <p style={{ color: "transparent" }} >lorem</p>
@@ -93,11 +83,14 @@ const about = () => (
       </div>
 
       <div>
-        <p className="some-heading-full-display">WORK</p>
+        <p className="some-heading-full-display">Work Experience</p>
       </div>
 
-      {/* <EduWorkSection /> */}
-      <Fade right >
+      <Fade left duration = {1000}>
+        <EduWorkBox avatar={hashedinlogo} name="Hashedin by Deloitte, Bengaluru" name_last="" job="SDET Intern" year="MAR 2022 - Present" link="https://hashedin.com/" />
+      </Fade>
+
+      <Fade right duration = {1000}>
         <EduWorkBox avatar={atglogo} name="Across The Globe (ATG) , Bengaluru" name_last="" job="Android Developer Intern " year="JUN - DEC 2021" link="https://www.atg.world/" />
       </Fade>
 
@@ -105,10 +98,10 @@ const about = () => (
         <p className="some-heading-full-display">Education</p>
       </div>
 
-      <Fade left >
+      <Fade left duration = {1000}>
         <EduWorkBox avatar={rungtalogo} name="Rungta College Of Engineering" name_last="and Technology , Bhilai" job="B.E. (CSE)" year="2018-2022" link="https://www.rungta.ac.in/" />
       </Fade>
-      <Fade right >
+      <Fade right duration = {1000}>
         <EduWorkBox avatar={shakuntalalogo} name="Shakuntala Vidyalaya , Bhilai" name_last="" job="12th & 10th" year="2018 & 2016" link="http://www.shakuntalavidyalaya.edu.in/" />
       </Fade>
 
@@ -117,19 +110,19 @@ const about = () => (
         <p className="some-heading-full-display">Other Intrests</p>
       </div>
 
-      </div>
+    </div>
 
-      <div className = "other-intrest-sec">
+    <div className="other-intrest-sec">
       <Row>
-        <Col md={6} lg={5}>
-          <OtherIntrestInfo />
+        <Col xs={6} md={4}>
+          <OtherIntrestInfo title = {drummer_title} des = {drummer_des}/>
         </Col>
-        <Col md={6} lg={7}>
+        <Col xs={12} md={8}>
           <EventsScrollView />
         </Col>
       </Row>
-      </div>
-   
+    </div>
+
   </div>
 );
 

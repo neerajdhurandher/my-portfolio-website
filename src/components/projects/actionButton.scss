@@ -11,6 +11,12 @@
     display:inline-flex;
     align-items: center; 
     text-align: center;
+
+    .MuiSvgIcon-root{
+        width: 1.1em;
+        height: 1.1em;
+    }
+
 }
 
 .action-button-div:hover{
@@ -18,7 +24,7 @@
 }
 
 .action-button-title{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 550;
     color: black;
 }
@@ -29,6 +35,6 @@
 }
 @media screen and (max-width: 500px) {
     .action-button-title{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }

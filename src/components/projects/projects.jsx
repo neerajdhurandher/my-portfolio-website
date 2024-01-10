@@ -19,6 +19,22 @@ import connectionslogo from "../../assets/projects/connections.png";
 // Components
 import Title from "../ui-components/title/title";
 import ProjectBox from "./projectsBox";
+import ActionButton from "./actionButton";
+
+
+function ProjectType(props) {
+  if (props.prams.type == "more-projects") {
+    return (
+        <div className="more-project-btn">
+          <ActionButton type={"github"} name={"More Projects"} link={props.prams.gihubLink} />
+        </div>
+    )
+  } else {
+    return (
+      <ProjectBox data={props.prams} />
+    )
+  }
+}
 
 const ProjectPage = () => {
 
@@ -29,34 +45,34 @@ const ProjectPage = () => {
         image: yaarilogo,
         id: "1",
         title: "Yaari",
-        description: "Fully Funcional Social Media App",
+        description: "Fully Functional Social Media App",
         uselang: "Android, Java, Firebase",
         date: "September 2020",
-        type : "app",
-        videoOrWebsiteLink : "",
+        type: "app",
+        videoOrWebsiteLink: "",
         gihubLink: "https://github.com/neerajdhurandher/Yaari",
       },
       {
         image: connectionslogo,
         id: "2",
         title: "Connections",
-        description: "This is webbased Chatting app",
-        uselang: "ReactJS, Firebase, Chat Engien.io",
+        description: "This is web based Chatting App",
+        uselang: "ReactJS, Firebase, Chat Engine.io",
         date: "October 2021",
-        type : "website",
-        videoOrWebsiteLink : "http://conections.tk",
+        type: "website",
+        videoOrWebsiteLink: "http://conections.tk",
         gihubLink: "https://github.com/neerajdhurandher/Connections",
       },
       {
-        image: mywebsitethumbnail,
+        image: imageSlogo,
         id: "3",
-        title: "My Portfolio",
-        description: "This website is about Me.",
-        uselang: "ReactJS, HTML, CSS, Material UI",
-        date: "July 2021",
-        type : "website",
-        videoOrWebsiteLink : "http://neerajdhurandher.tk",
-        gihubLink: "https://github.com/neerajdhurandher/my-portfolio-website",
+        title: "Img Searcher",
+        description: "Search and Download Images",
+        uselang: "Android, Java, RestAPI",
+        date: "May 2021",
+        type: "app",
+        videoOrWebsiteLink: "",
+        gihubLink: "https://github.com/neerajdhurandher/Neeraj_Image_Search",
       },
       {
         image: upasthitilogo,
@@ -65,20 +81,31 @@ const ProjectPage = () => {
         description: "Students,Teachers Manage App",
         uselang: "Android, Java, Firebase",
         date: "December 2020",
-        type : "app",
-        videoOrWebsiteLink : "",
+        type: "app",
+        videoOrWebsiteLink: "",
         gihubLink: "https://github.com/neerajdhurandher/upasthiti",
       },
       {
-        image: imageSlogo,
+        image: mywebsitethumbnail,
         id: "5",
-        title: "Img Searcher",
-        description: "Search and Download Images",
-        uselang: "Android, Java, RestAPI",
-        date: "May 2021",
-        type : "app",
-        videoOrWebsiteLink : "",
-        gihubLink: "https://github.com/neerajdhurandher/Neeraj_Image_Search",
+        title: "My Portfolio",
+        description: "This website is about Me.",
+        uselang: "ReactJS, NPMJS, SCSS, Material UI",
+        date: "July 2021",
+        type: "website",
+        videoOrWebsiteLink: "https://neerajdhurandher.me",
+        gihubLink: "https://github.com/neerajdhurandher/my-portfolio-website",
+      },
+      {
+        image: "",
+        id: "6",
+        title: "More Projects",
+        description: "",
+        uselang: "",
+        date: "",
+        type: "more-projects",
+        videoOrWebsiteLink: "",
+        gihubLink: "https://github.com/neerajdhurandher?tab=repositories",
       },
 
     ],
@@ -89,14 +116,14 @@ const ProjectPage = () => {
   if (state.projectItems) {
     projectsRender = state.projectItems.map((story) => (
       <div key={story.id}>
-        <ProjectBox data={story} />
+        <ProjectType prams={story} />
       </div>
     ));
   }
 
   const itemBreakpoints = {
-    default: 1,
-    1100: 1,
+    default: 2,
+    1100: 2,
     700: 1,
     500: 1,
   };
@@ -105,21 +132,21 @@ const ProjectPage = () => {
     <div className="projects" id="projects">
       <div className="wrapper">
         <Title title="My Projects" />
-        <p className="font18 weight500 padding20">Here are my some project by using different Languages , Platforms and Tecchnologies.</p>
+        <p className="font18 weight500 padding20">Here are some of my project by using different Programming Languages , Platforms and Tecchnologies.</p>
+      </div>
+      <div className="project_div">
 
-        <div className=" project_div">
-
-          <Masonry breakpointCols={itemBreakpoints} className="my-masonry-grid" columnClassName="mint__gallery">
-            {projectsRender}
-          </Masonry>
-
-        </div>
-
-        <div className="flex-center padding30">
-          <Button label="Review" target={"contact"} />
-        </div>
+        <Masonry breakpointCols={itemBreakpoints} className="my-masonry-grid" columnClassName="mint__gallery">
+          {projectsRender}
+        </Masonry>
 
       </div>
+
+      {/* <div className="flex-center padding30">
+        <Button label="Review" target={"contact"} />
+      </div> */}
+
+
     </div>
   );
 }
