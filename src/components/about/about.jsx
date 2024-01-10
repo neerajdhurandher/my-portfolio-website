@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-flexbox-grid";
+import Fade from "react-reveal"
 import "./about.scss";
 
 
@@ -21,9 +22,6 @@ let emaillink = "mailto:websiteneeraj@gmail.com?subject = Feedback From Website&
 let phonelink = "tel:7224010437";
 let homelink = "https://goo.gl/maps/jQrLPbbSMJz7MiFx6";
 
-function refreshPage() {
-  window.location.reload(false);
-}
 
 let downloadResume = () => {
   fetch('https://drive.google.com/drive/folders/1nc_JnFrAl7OOq1ZfSaRa2EqV0mGgM62K')
@@ -43,7 +41,9 @@ let downloadResume = () => {
 
 const about = () => (
   <div id="about">
+
     <div className="wrapper">
+      
       <Title title="ABOUT ME." />
 
       <div>
@@ -64,25 +64,26 @@ const about = () => (
 
           <Row>
             <Col md={12} lg={6}>
-              <div  >
-
-                <AboutDetails type="email" title="Email " value="websiteneeraj@gmail.com " link={emaillink} />
-                <p style={{ color: "transparent" }} >lorem</p>
-                <AboutDetails type="phone" title="Phone No. " value="7224010437" link={phonelink} />
-                <p style={{ color: "transparent" }} >lorem</p>
-              </div>
+              <Fade left >
+                <div>
+                  <AboutDetails type="email" title="Email " value="websiteneeraj@gmail.com " link={emaillink} />
+                  <p style={{ color: "transparent" }} >lorem</p>
+                  <AboutDetails type="phone" title="Phone No. " value="7224010437" link={phonelink} />
+                  <p style={{ color: "transparent" }} >lorem</p>
+                </div>
+              </Fade>
             </Col>
 
 
             <Col md={12} lg={6}>
-              <div >
-
-                <AboutDetails type="website" title="Website " value="neerajdhurandher.tk" link="http://www.neerajdhurandher.tk" />
-                <p style={{ color: "transparent" }} >lorem</p>
-                <AboutDetails type="address" title="Address " value="Bhilai (CG), India" link={homelink} />
-                <p style={{ color: "transparent" }} >lorem</p>
-              </div>
-
+              <Fade right >
+                <div >
+                  <AboutDetails type="website" title="Website " value="neerajdhurandher.tk" link="http://www.neerajdhurandher.tk" />
+                  <p style={{ color: "transparent" }} >lorem</p>
+                  <AboutDetails type="address" title="Address " value="Bhilai (CG), India" link={homelink} />
+                  <p style={{ color: "transparent" }} >lorem</p>
+                </div>
+              </Fade>
             </Col>
 
           </Row>
@@ -91,27 +92,34 @@ const about = () => (
 
       </div>
 
-
-
       <div>
         <p className="some-heading-full-display">WORK</p>
       </div>
 
-      <EduWorkBox avatar={atglogo} name="Across The Globe (ATG) , Bengaluru" name_last="" job="Android Developer Intern " year="JUN - DEC 2021" link="https://www.atg.world/" />
-
+      {/* <EduWorkSection /> */}
+      <Fade right >
+        <EduWorkBox avatar={atglogo} name="Across The Globe (ATG) , Bengaluru" name_last="" job="Android Developer Intern " year="JUN - DEC 2021" link="https://www.atg.world/" />
+      </Fade>
 
       <div>
         <p className="some-heading-full-display">Education</p>
       </div>
 
-      <EduWorkBox avatar={rungtalogo} name="Rungta College Of Engineering" name_last="and Technology , Bhilai" job="B.E. (CSE)" year="2018-2022" link="https://www.rungta.ac.in/" />
+      <Fade left >
+        <EduWorkBox avatar={rungtalogo} name="Rungta College Of Engineering" name_last="and Technology , Bhilai" job="B.E. (CSE)" year="2018-2022" link="https://www.rungta.ac.in/" />
+      </Fade>
+      <Fade right >
+        <EduWorkBox avatar={shakuntalalogo} name="Shakuntala Vidyalaya , Bhilai" name_last="" job="12th & 10th" year="2018 & 2016" link="http://www.shakuntalavidyalaya.edu.in/" />
+      </Fade>
 
-      <EduWorkBox avatar={shakuntalalogo} name="Shakuntala Vidyalaya , Bhilai" name_last="" job="12th & 10th" year="2018 & 2016" link="http://www.shakuntalavidyalaya.edu.in/" />
 
       <div>
         <p className="some-heading-full-display">Other Intrests</p>
       </div>
 
+      </div>
+
+      <div className = "other-intrest-sec">
       <Row>
         <Col md={6} lg={5}>
           <OtherIntrestInfo />
@@ -120,8 +128,8 @@ const about = () => (
           <EventsScrollView />
         </Col>
       </Row>
-
-    </div>
+      </div>
+   
   </div>
 );
 

@@ -1,17 +1,18 @@
 import React from "react";
+import Fade from "react-reveal"
 // Scss
 import "./skillsBox.scss";
 
 const skillsBox = (props) => (
-  <div className="skills__box ">
-    <img className = "skill_img" src={props.preview} alt="project" />
-    {/* <div className="skills__hover-info flex-center"> */}
+  <Fade top distance="10px">
+    <div className="skills__box ">
+      <img className="skill_img" src={props.preview} alt="project" />
       <div className="text-center">
         <p className="font30 weight800">{props.title}</p>
         <p className="font18 weight500">{props.tag}</p>
       </div>
     </div>
-  // </div>
+  </Fade>
 );
 
 export default skillsBox;

@@ -1,9 +1,9 @@
 @import '../../style/App.scss';
 
 #about {
+  width: 1400ox;
   padding: 60px 0;
   color: white;
-  background-color: rgb(27, 26, 26);
 }
 p{
   text-align: center;
@@ -63,6 +63,11 @@ p{
   width: max-content;
   // margin: auto;
   font-size: 16px;
+}
+
+
+.other-intrest-sec{
+  padding: 0% 5%;
 }
 
 @media screen and (max-width: 500px) {
