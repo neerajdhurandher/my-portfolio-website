@@ -112,10 +112,10 @@ class Contact extends React.Component {
       <div  id="contact">
         {modalRender}
         <div className="wrapper">
-          <Title title="CONTACT ME." />
-          <p className="font15">For Projects, Collaboration, Events or Other Works, just drop a message here. I would love to work with you.</p>
+          <Title title="CONTACT ME" />
+          <p className="font15 padding5" style={{textAlign:"left"}}>For Projects, Collaboration, Events or Other Works, just drop a message here. I would love to work with you.</p>
    
-          <Row className="padding40">
+          <Row className="padding20">
             <Col md={12} lg={6}>
               <form id="contact-form" onSubmit={this.handleSubmit}>
                 <h4 className="font30 weight600 padding30 active-link">Write Message Here.</h4>

@@ -17,6 +17,7 @@ import htmllogo from "../../assets/skills_photos/html_logo.png";
 import csslogo from "../../assets/skills_photos/css_logo.png";
 import javascriptlogo from "../../assets/skills_photos/javascript_logo.png";
 import mysqllogo from "../../assets/skills_photos/my_sql_logo.png";
+import springlogo from "../../assets/skills_photos/spring.png";
 
 
 //Components
@@ -35,13 +36,13 @@ class Skills extends React.Component {
           id: "1",
           preview: javalogo,
           title: "Java",
-          tag: "Intermediate",
+          tag: "Working Exp",
         },
         {
           id: "2",
           preview: android_studiologo,
           title: "Android Studio",
-          tag: "Intermediate",
+          tag: "Working Exp",
         },
         {
           id: "3",
@@ -51,15 +52,15 @@ class Skills extends React.Component {
         },
         {
           id: "4",
-          preview: cpplogo,
-          title: "C++",
-          tag: "Intermediate",
+          preview: javascriptlogo,
+          title: "JavaScript",
+          tag:"Beginner",
         },
         {
           id: "5",
           preview: reactjslogo,
           title: "ReactJS",
-          tag: "Intermediate",
+          tag: "Working Exp",
         },
         {
           id: "6",
@@ -67,35 +68,22 @@ class Skills extends React.Component {
           title: "Kotlin",
           tag: "Intermediate",
         },
-
         {
           id: "7",
-          preview:htmllogo ,
-          title: "Html",
-          tag:"Intermediate",
-        },
-        {
-          id: "8",
-          preview: javascriptlogo,
-          title: "JavaScript",
-          tag:"Beginner",
-        },
-        {
-          id: "9",
-          preview:csslogo ,
-          title: "Css",
-          tag:"Intermediate",
-        },
-        {
-          id: "10",
           preview: mysqllogo,
           title: "MySQL",
           tag: "Intermediate",
         },
         {
-          id: "11",
+          id: "8",
           preview: firebaselogo,
           title: "Firebase",
+          tag: "Working Exp",
+        },
+        {
+          id: "9",
+          preview: springlogo,
+          title: "Spring Boot",
           tag: "Intermediate",
         }
 
