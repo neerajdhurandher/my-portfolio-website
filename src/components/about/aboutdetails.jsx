@@ -8,13 +8,13 @@ import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import InstagramIcon from '@material-ui/icons/Instagram';
 
 function DetailType(props) {
-  if (props.type == "email")
+  if (props.type === "email")
     return <MailOutlineRoundedIcon className="about_details_icon" style={{ fontSize: "25px" }} />;
-  if (props.type == "instagram")
+  if (props.type === "instagram")
     return <InstagramIcon className="about_details_icon" style={{ fontSize: "25px" }} />;
-  if (props.type == "website")
+  if (props.type === "website")
     return <LanguageOutlinedIcon className="about_details_icon" style={{ fontSize: "25px" }} />;
-  if (props.type == "address")
+  if (props.type === "address")
     return <HomeOutlinedIcon className="about_details_icon" style={{ fontSize: "25px" }} />;
   else
     return <HomeOutlinedIcon className="about_details_icon" style={{ fontSize: "25px" }} />;
