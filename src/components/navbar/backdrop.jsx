@@ -5,7 +5,7 @@ import "./navbar.scss";
 const backdrop = (props) => (
   <div
     onClick={props.closeMobileMenu}
-    className={`backdrop ${props.isOpen ? "backdrop__open" : ""}`}
+    className={`backdrop ${props.isOpen ? "backdrop__open" : ""} ${props.userIsScrolled ? "backdrop_large" : ""}`}
   ></div>
 );
 

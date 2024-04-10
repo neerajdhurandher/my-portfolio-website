@@ -45,10 +45,10 @@ class App extends React.Component {
 
   render() {
     // BACKDROP RENDER
-    let backdrop = <Backdrop closeMobileMenu={this.closeMobileMenu} />;
+    let backdrop = <Backdrop closeMobileMenu={this.closeMobileMenu} userIsScrolled={this.state.userIsScrolled}/>;
     if (this.state.mobileNavbarOpen) {
       backdrop = (
-        <Backdrop closeMobileMenu={this.closeMobileMenu} isOpen={true} />
+        <Backdrop closeMobileMenu={this.closeMobileMenu} userIsScrolled={this.state.userIsScrolled} isOpen={true} />
       );
     }
     // MOBILE NAVBAR RENDER
