@@ -5,7 +5,7 @@ import './navbar.scss';
 import './hamburger.scss'
 
 // Assets
-import LogoNeeraj from '../../assets/navbar/neeraj_logo_svg.svg';
+import LogoIcon from '../../assets/navbar/neeraj_logo_svg.svg';
 
 let menuOpen = false;
 
@@ -34,10 +34,10 @@ const desktopNav = (props) => (
     <div className="wrapper flex-s-between">
       <div>
         <Link to="mainpage" spy={true} smooth={true} offset={-70} duration={500}>
-          <img src={LogoNeeraj} alt="logo" className="pointer" />
+          <img src={LogoIcon} alt="logo" className="pointer" />
         </Link>
       </div>
-
+      {/*  hamburger */}
       <div className="mobile__menu" onClick = {hamburgerEvent} onClick={menuOpen ? props.closeMobileMenu : props.mobileMenuOpen}  >
         {
           <SetMenuState setMenu={props.mobileNavbarOpen} />

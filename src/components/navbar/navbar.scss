@@ -1,17 +1,19 @@
 @import '../../style/App.scss';
 
+a{
+  color: $white-color;
+}
 // DESKTOP NAVBAR
 .Navbar {
   position: sticky;
   top: 0;
   left: 0;
-  // background-color: $white-color;  
   width: 100%;
   padding: 9px 0;
   transition:  0.3s ease;
   z-index: 100;
   color: white;
-  background-color: rgb(27, 26, 26);
+  background-color: $bg-color;
 
 
   .mobile__menu {
@@ -23,8 +25,6 @@
   }
   .desktop__menu {
     display: block;
-    
-
     ul {
       li {
         cursor: pointer;
@@ -52,8 +52,7 @@
 .mobile__navbar {
   height: 100%;
   position: fixed;
-  margin-top: 20%;
-  top: 0;
+  margin-top: 14%;
   right: -100%;
   background-color: $black-color;
   z-index: 1000;
@@ -65,7 +64,6 @@
     padding: 10px;
     margin-left: 80%;
     cursor: pointer;
-    
   }
   .mobile__navbar-logo {
     padding: 1%;
@@ -91,8 +89,7 @@
 }
 
 .small-nav{
-  margin-top: 16%;
-
+  margin-top: 12%;
 }
 
 // BACKDROP
@@ -102,7 +99,7 @@
   background-color: $black-color;
   opacity: 0.8;
   position: fixed;
-  margin-top: 20%;  
+  margin-top: 14%;  
   top: 0;
   right: 0;
   z-index: 500;
@@ -110,7 +107,9 @@
 }
 .backdrop__open {
   display: block;
-  top: 20%;
+}
+.backdrop_large{
+  margin-top: 12%;
 }
 
 // MEDIA QUERIES
@@ -119,7 +118,6 @@
      width: 100%;
     .mobile__menu {
       display: block;
-     
     }
     .desktop__menu {
       display: none;
@@ -133,5 +131,9 @@
 @media screen and (max-width: 520px) {
   .mobile__navbar {
     width: 100%;
+    margin-top: 18%;
+  }
+  .backdrop{
+    margin-top: 17%;
   }
 }
