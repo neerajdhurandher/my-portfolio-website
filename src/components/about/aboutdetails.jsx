@@ -2,10 +2,10 @@ import React from "react";
 import "./aboutdetails.scss";
 
 // /Icon
-import MailOutlineRoundedIcon from '@material-ui/icons/MailOutlineRounded';
-import LanguageOutlinedIcon from '@material-ui/icons/LanguageOutlined';
-import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
-import InstagramIcon from '@material-ui/icons/Instagram';
+import MailOutlineRoundedIcon from '@mui/icons-material/MailOutlineRounded';
+import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 function DetailType(props) {
   if (props.type === "email")

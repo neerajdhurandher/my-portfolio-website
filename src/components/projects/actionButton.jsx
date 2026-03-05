@@ -2,9 +2,9 @@ import React from "react";
 
 import "./actionButton.scss";
 
-import GitHubIcon from '@material-ui/icons/GitHub';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import Website from '@material-ui/icons/Language';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import Website from '@mui/icons-material/Language';
 
 function ButtonType(props) {
     if (props.buttonType == "github")

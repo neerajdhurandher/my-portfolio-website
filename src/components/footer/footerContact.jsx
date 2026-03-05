@@ -9,7 +9,7 @@ const FooterContact = () => {
 
     return (
         <>
-            <VisiterCount />
+            {/* <VisiterCount /> */}
             <ContactInfo />
             <ContactSocial />
         </>

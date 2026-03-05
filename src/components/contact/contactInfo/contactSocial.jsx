@@ -3,11 +3,11 @@ import { Row, Col } from "react-flexbox-grid";
 import "./contactSocial.scss";
 
 // Icons
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import DeveloperModeIcon from '@material-ui/icons/DeveloperMode';
-import InstagramIcon from '@material-ui/icons/Instagram';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 // links
 const github_link = "https://github.com/neerajdhurandher?tab=repositories";

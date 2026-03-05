@@ -9,8 +9,8 @@ const eduWorkBox = (props) => (
       <Row>
         <Col md={12} lg={4}>
           <div className="institute-round-image">
-            <div class="round_image_circle">
-              <img class="round_image" src={props.avatar} alt="Organization logo" />
+            <div className="round_image_circle">
+              <img className="round_image" src={props.avatar} alt="Organization logo" />
             </div>
           </div>
         </Col>
