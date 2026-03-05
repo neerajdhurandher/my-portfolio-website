@@ -1,0 +1,68 @@
+name: CI/CD React Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build React app
+        run: npm run build
+
+      - name: Get version for branch
+        id: versioning
+        env:
+          GH_TOKEN: ${{ secrets.TARGET_REPO_TOKEN }}
+        run: |
+          echo "Getting latest version branch from target_repo..."
+          git ls-remote --heads https://x-access-token:${GH_TOKEN}@github.com/neerajdhurandher/neerajdhurandher.github.io.git "refs/heads/v*" | awk -F'/' '{print $3}' | sort -V | tail -n1 > latest_branch.txt
+          if [ -s latest_branch.txt ]; then
+            latest=$(cat latest_branch.txt)
+            version_num=$(echo $latest | sed 's/v//')
+            new_version=$((version_num + 1))
+          else
+            new_version=1
+          fi
+          echo "new_branch=v${new_version}" >> $GITHUB_OUTPUT
+
+      - name: Push build to target_repo on new version branch
+        env:
+          GH_TOKEN: ${{ secrets.TARGET_REPO_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git clone https://x-access-token:${GH_TOKEN}@github.com/neerajdhurandher/neerajdhurandher.github.io.git target_repo
+          cd target_repo
+          git checkout --orphan ${{ steps.versioning.outputs.new_branch }}
+          git rm -rf .
+          cp -r ../build/* .
+          git add .
+          git commit -m "Deploy build to ${{ steps.versioning.outputs.new_branch }}"
+          git push origin ${{ steps.versioning.outputs.new_branch }}
+
+      - name: Create PR from new branch to main in target_repo
+        env:
+          GH_TOKEN: ${{ secrets.TARGET_REPO_TOKEN }}
+        run: |
+          gh auth login --with-token <<<"${GH_TOKEN}"
+          gh pr create \
+            --repo neerajdhurandher/neerajdhurandher.github.io \
+            --base main \
+            --head ${{ steps.versioning.outputs.new_branch }} \
+            --title "Deploy build: ${{ steps.versioning.outputs.new_branch }} -> main" \
+            --body "Automated PR to merge the latest React build from ${{ steps.versioning.outputs.new_branch }} into main."
