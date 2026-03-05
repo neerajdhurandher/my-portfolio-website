@@ -10,7 +10,7 @@ import OtherInterestInfo from "./itemInfo";
 import EventsScrollView from "../events/eventSwiper";
 import AboutDetails from "./aboutdetails";
 import Title from "../ui-components/title/title";
-import DownloadIcon from '@material-ui/icons/ArrowDownwardRounded';
+import DownloadIcon from '@mui/icons-material/ArrowDownwardRounded';
 
 // Assets
 import hashedin_logo from "../../assets/about/hashedin_logo.png";

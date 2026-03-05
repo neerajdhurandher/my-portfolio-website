@@ -3,7 +3,7 @@ import Masonry from "react-masonry-css";
 
 // SCSS
 import "./projects.scss";
-import "swiper/css/swiper.css";
+// import "swiper/css/swiper.css";
 import '../../style/App.scss';
 
 // Assets

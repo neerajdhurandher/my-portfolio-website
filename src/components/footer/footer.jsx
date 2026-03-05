@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "react-flexbox-grid";
 import { Link } from "react-scroll";
 import "./footer.scss";
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 import Arrow from '../../assets/footer/arrow.svg';
 

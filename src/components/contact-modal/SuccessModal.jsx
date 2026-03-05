@@ -1,6 +1,6 @@
 import React from "react";
 import "./modal.scss";
-import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
+import CheckCircleOutlineRoundedIcon from '@mui/icons-material/CheckCircleOutlineRounded';
 
 const successModal = (props) => (
   <div className="sucess__modal">
