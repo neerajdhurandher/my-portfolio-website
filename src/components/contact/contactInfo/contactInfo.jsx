@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "react-flexbox-grid";
+import { Row, Col } from "react-bootstrap";
 import "./contactInfo.scss";
 
 import ContactInfoBox from "../contactInfo/contactInfoBox";
@@ -15,8 +15,8 @@ const contactInfo = () => (
   <div className = "contact__info">
   <Row>
     <Col xs={12}>
-      <Row center="xs">
-        <Col xs={12} lg={3} className="contact__info">
+      <Row className="justify-content-center">
+        <Col xs={12} lg={3}>
           <ContactInfoBox
             icon={AdressPinIcon}
             textLine1="Bhilai Chhattisgarh "
@@ -24,17 +24,17 @@ const contactInfo = () => (
             link = "https://goo.gl/maps/jQrLPbbSMJz7MiFx6"
           />
         </Col>
-        <Col xs={12} lg={3} className="contact__info">
+        <Col xs={12} lg={3}>
           <ContactInfoBox
             icon={PhoneIcon}
-            textLine1="7224010437"
+            textLine1="< 404 Not Found :) >"
             textLine2=""
-            link = "tel:7224010437"
+            link = ""
             
            
           />
         </Col>
-        <Col xs={12} lg={3} className="contact__info">
+        <Col xs={12} lg={3}>
           <ContactInfoBox
             icon={EmailIcon}
             textLine1="websiteneeraj@gmail.com"

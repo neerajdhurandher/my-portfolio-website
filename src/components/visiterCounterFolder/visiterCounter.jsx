@@ -4,7 +4,6 @@ import ShowVisiterCount from './showVisitersCount'
 
 import "../../style/App.scss";
 
-let websiteTesting = 'neerajbhaibhai.com';
 let websiteReal = 'neerajdhurandher.me';
 const key = 'visit';
 
@@ -29,11 +28,11 @@ const Visiter = () => {
         // console.log("api call");
 
 
-        if (isVisited == "true") {
+        if (isVisited === "true") {
 
             countapi.get(websiteReal, key).then((result) => {
 
-                if (result.status == 200) {
+                if (result.status === 200) {
                     SetVisiterCount(result.value);
                     // console.log("already  " + result.value);
                 }
@@ -46,11 +45,11 @@ const Visiter = () => {
 
         }
 
-        else if (isVisited == null) {
+        else if (isVisited === null) {
 
             countapi.hit(websiteReal, key).then((result) => {
 
-                if (result.status == 200) {
+                if (result.status === 200) {
                     SetIsVisited("true");
                     SetVisiterCount(result.value);
                     localStorage.setItem(websiteReal, "true");
@@ -67,7 +66,7 @@ const Visiter = () => {
             });
         }
 
-    }, []);
+    }, [isVisited]);
 
 
 

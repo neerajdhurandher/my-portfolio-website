@@ -1,6 +1,6 @@
 import React from "react";
-import { Row, Col } from "react-flexbox-grid";
-import Fade from "react-reveal"
+import { Row, Col } from "react-bootstrap";
+import Fade from "react-awesome-reveal"
 import "./about.scss";
 
 

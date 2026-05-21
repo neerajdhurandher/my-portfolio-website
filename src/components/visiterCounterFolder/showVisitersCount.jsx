@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import CountUp from 'react-countup';
 
 import "../../style/App.scss";
 
-import Tooltip from '../tooltip/tooltip.jsx'
 
 const ShowVisitersCount = (props) => {
 

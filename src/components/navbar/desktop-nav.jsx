@@ -38,7 +38,7 @@ const desktopNav = (props) => (
         </Link>
       </div>
       {/*  hamburger */}
-      <div className="mobile__menu" onClick = {hamburgerEvent} onClick={menuOpen ? props.closeMobileMenu : props.mobileMenuOpen}  >
+      <div className="mobile__menu" onClick={menuOpen ? props.closeMobileMenu : props.mobileMenuOpen}  >
         {
           <SetMenuState setMenu={props.mobileNavbarOpen} />
         }

@@ -1,12 +1,10 @@
 import React from "react";
-import { Row, Col } from "react-flexbox-grid";
+import { Row, Col } from "react-bootstrap";
 import "./contact.scss";
-import * as emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import Title from "../ui-components/title/title";
 
 import Modal from '../contact-modal/Modal';
-
-import bg_img from "../../assets/contact/contact-coding-bg.jpg"
 
 class Contact extends React.Component {
   constructor(props) {
@@ -34,20 +32,24 @@ class Contact extends React.Component {
       user_name: this.state.name,
       user_email: this.state.email,
       message: this.state.message,
+      user_agent: navigator.userAgent,
+      platform: navigator.platform,
+      language: navigator.language,
+      screen_resolution: `${window.screen.width}x${window.screen.height}`,
     };
 
 
       //  EMAIL.JS API KEY IN FORMAT user_xxxxxxxxxxxxxxxxxx
-      let API_KEY = "user_3wyedjZDiCRhIZPqDztot";
+      let API_KEY = process.env.REACT_APP_EMAILJS_API_KEY;
 
       //  EMAIL.JS TEMPLATE ID
-      let TEMPLATE_ID = "template_pi4nywi";
+      let TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
   
       // EMAIL.JS Service Id 
-      let SERVICE_ID = "service_mtgfuxj";
+      let SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 
 
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, template_params , API_KEY).then(
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, template_params, { publicKey: API_KEY }).then(
       function (response) {
         console.log("response :- " + response.status);
         if (response.status === 200) {
@@ -72,10 +74,6 @@ class Contact extends React.Component {
     this.setState({ errorModal: true, sending: false });
     this.resetForm();
   };
-  // RESET CONTACT FORM
-  resetForm() {
-    this.setState({ name: "", email: "", message: "" });
-  }
   // CLOSE ALL MODALS
   closeModal = () => {
     this.setState({ successModal: false, errorModal: false });
