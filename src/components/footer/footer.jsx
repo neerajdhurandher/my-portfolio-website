@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "react-flexbox-grid";
+import { Row, Col } from "react-bootstrap";
 import { Link } from "react-scroll";
 import "./footer.scss";
 import FavoriteIcon from '@mui/icons-material/Favorite';

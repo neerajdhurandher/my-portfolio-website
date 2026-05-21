@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-scroll";
 import Typewriter from "typewriter-effect";
-import { Row, Col } from "react-flexbox-grid";
+import { Row, Col } from "react-bootstrap";
 
 import "./mainpage.scss";
 import ContactSocial from '../contact/contactInfo/contactSocial';
 import MouseScrollAnim from "./mouseScrollAnim";
 import '../contact/contactInfo/contactSocial.scss';
-import Button from '../ui-components/button/button';
 
 
 import my_photo from '../../assets/mainpage/my_photo.png';

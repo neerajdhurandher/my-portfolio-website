@@ -7,13 +7,13 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import Website from '@mui/icons-material/Language';
 
 function ButtonType(props) {
-    if (props.buttonType == "github")
+    if (props.buttonType === "github")
         return <GitHubIcon className="button_icon" />;
 
-    else if (props.buttonType == "website")
+    else if (props.buttonType === "website")
         return <Website className="button_icon" />;
 
-    else if (props.buttonType == "video")
+    else if (props.buttonType === "video")
         return <YouTubeIcon className="button_icon" />;
 }
 
@@ -21,7 +21,7 @@ const ActionButton = (props) => {
 
     const type = () => {
 
-        if (props.type == "github" || props.type == "website") {
+        if (props.type === "github" || props.type === "website") {
             return true;
         }
         else {

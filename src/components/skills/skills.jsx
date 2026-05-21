@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "react-flexbox-grid";
+import { Row } from "react-bootstrap";
 import Masonry from "react-masonry-css";
 //Scss
 import "./skills.scss";

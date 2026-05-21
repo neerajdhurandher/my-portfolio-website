@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import Masonry from "react-masonry-css";
 
 // SCSS
@@ -22,7 +22,7 @@ import ActionButton from "./actionButton";
 
 
 function ProjectType(props) {
-  if (props.prams.type == "more-projects") {
+  if (props.prams.type === "more-projects") {
     return (
         <div className="more-project-btn">
           <ActionButton type={"github"} name={"More Projects"} link={props.prams.gihubLink} />

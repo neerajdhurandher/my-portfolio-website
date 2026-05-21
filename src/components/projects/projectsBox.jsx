@@ -1,19 +1,15 @@
 import React from "react";
-import { Row, Col } from "react-flexbox-grid";
-import Fade from 'react-reveal/Fade';
+import { Row, Col } from "react-bootstrap";
+import Fade from 'react-awesome-reveal';
 
 
 import "./projectsBox.scss";
 
 import ActionButton from "./actionButton";
 import Tooltip from '../tooltip/tooltip.jsx';
-import YoutubePopUp from "./youtubePopUp.jsx";
-
-import AndroidIcon from '../../assets/projects/android-icon-48.png';
-import WebsiteIcon from '../../assets/projects/website-icon-48.png';
 
 function AppOrWebsite(props) {
-  if (props.type == "app")
+  if (props.type === "app")
     return (
       <>
         <Tooltip text="Sorry video not available yet ">
