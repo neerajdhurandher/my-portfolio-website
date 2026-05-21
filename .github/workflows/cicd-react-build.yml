@@ -54,7 +54,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git clone https://x-access-token:${GH_TOKEN}@github.com/${TARGET_REPO} target_repo
           cd target_repo
-          git checkout --orphan ${{ steps.versioning.outputs.new_branch }}
+          git checkout -b ${{ steps.versioning.outputs.new_branch }} main
           git rm -rf .
           cp -r ../build/* .
           git add .
