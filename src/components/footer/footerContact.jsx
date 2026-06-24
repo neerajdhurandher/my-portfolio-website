@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-import ContactInfo from './../contact/contactInfo/contactInfo';
 import ContactSocial from './../contact/contactInfo/contactSocial';
 
 const FooterContact = () => {
