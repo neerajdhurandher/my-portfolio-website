@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 import "./navbar.scss";
+import ResumeDownloadButton from "../ui-components/resume-download/resume-button"
 
 function NavItem (props) {
   
@@ -43,6 +44,10 @@ const mobileNav = (props) => (
 
         <li className="flex-center">
           <NavItem  to = "contact" name = "CONTACT" action = {props.closeMobileMenu}/>
+        </li>
+
+        <li className="flex-center">
+          <ResumeDownloadButton/>
         </li>
       </ul>
     </div>

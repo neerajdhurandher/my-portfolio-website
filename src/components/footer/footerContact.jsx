@@ -9,8 +9,8 @@ const FooterContact = () => {
     return (
         <>
             {/* <VisiterCount /> */}
-            <ContactInfo />
-            <ContactSocial />
+            {/* <ContactInfo /> */}
+            <ContactSocial iconPadding={true} />
         </>
     )
 }

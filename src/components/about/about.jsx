@@ -13,6 +13,7 @@ import Title from "../ui-components/title/title";
 import DownloadIcon from '@mui/icons-material/ArrowDownwardRounded';
 
 // Assets
+import hpe_logo from "../../assets/about/hpe_logo.png"
 import hashedin_logo from "../../assets/about/hashedin_logo.png";
 import atg_logo from "../../assets/about/atg_logo.png";
 import rungta_logo from "../../assets/about/rungta_logo.png";
@@ -85,7 +86,11 @@ const about = () => (
       </div>
 
       <Fade left duration={1000}>
-        <EduWorkBox avatar={hashedin_logo} name="Hashedin by Deloitte, Bengaluru" name_last="" job="Software Engineer II" year="MAR 2022 - Present" link="https://hashedin.com/" />
+        <EduWorkBox avatar={hpe_logo} name="Hewlett Packard Enterprise (HPE)" name_last="Bengaluru" job="Software Engineer II" year="JUN 2026 - Present" link="https://hpe.com/" />
+      </Fade>
+
+      <Fade left duration={1000}>
+        <EduWorkBox avatar={hashedin_logo} name="Hashedin by Deloitte, Bengaluru" name_last="" job="Software Engineer II" year="MAR 2022 - JUN 2026" link="https://hashedin.com/" />
       </Fade>
 
       <Fade right duration={1000}>
