@@ -14,12 +14,12 @@ const linkedin_link = "https://www.linkedin.com/in/neeraj-dhurandher";
 const youtube_link = "https://www.youtube.com/channel/UCkG3MafX2ivqD7qXyN9J-Xw";
 const instagram_link = "https://instagram.com/neeraj_dhurandher";
 
-const contactSocial = () => (
+const contactSocial = (props) => (
 
   <div className="social_contact_div" >
     <Row>
       <Col xs={12}>
-        <Row className="justify-content-center">
+        <Row className={`justify-content-center ${props.iconPadding ? 'icon-row' : ''}`}>
           <Col xs={3} lg={2} >
             <GitHubIcon className="contact__social" onClick={() => window.open(github_link, "_blank")} />
           </Col>

@@ -26,7 +26,7 @@ const mainpage = () => (
 
               <Typewriter className="typetext"
                 options={{
-                  strings: ['Android Developer', 'Web Developer', 'Drummer'],
+                  strings: ['Backend Developer', 'GenAI Developer', 'Drummer'],
                   autoStart: true,
                   loop: true,
                 }}

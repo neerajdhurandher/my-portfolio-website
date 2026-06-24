@@ -3,9 +3,12 @@
 .social_contact_div {
   width: 100%;
   color: white;
-  padding-top: 3%;
-  padding-bottom: 2%;
+  padding: 2% 0;
   background-color: $bg-color;
+}
+
+.icon-row{
+  padding-left: 10%;
 }
 
 .contact__social {

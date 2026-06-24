@@ -27,7 +27,7 @@ const contactInfo = () => (
         <Col xs={12} lg={3}>
           <ContactInfoBox
             icon={PhoneIcon}
-            textLine1="< 404 Not Found :) >"
+            textLine1="< 404 :) >"
             textLine2=""
             link = ""
             

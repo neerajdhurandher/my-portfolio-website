@@ -9,11 +9,14 @@ a{
   top: 0;
   left: 0;
   width: 100%;
-  padding: 9px 0;
   transition:  0.3s ease;
   z-index: 100;
   color: white;
   background-color: $bg-color;
+
+  .main-logo {
+    border-radius: 50%;
+  }
 
 
   .mobile__menu {
@@ -29,7 +32,6 @@ a{
       li {
         cursor: pointer;
         padding: 2rem 2.7rem;
-        margin: 0 1rem;
       }
       li:last-child {
         margin-right: 0;

@@ -13,6 +13,7 @@ import upasthitilogo from "../../assets/projects/upasthiti_logo.jpg";
 import mywebsitethumbnail from "../../assets/projects/my_website_thumbnail.png";
 import connectionslogo from "../../assets/projects/connections.png";
 import udemySpringlogo from "../../assets/projects/udemy_spring_2.png";
+import chrome_new_tab from "../../assets/projects/chrome_new_tab.png"
 
 
 // Components
@@ -52,15 +53,15 @@ const ProjectPage = () => {
         gihubLink: "https://github.com/neerajdhurandher/Yaari",
       },
       {
-        image: connectionslogo,
+        image: chrome_new_tab,
         id: "2",
-        title: "Connections",
+        title: "Chrome New Tab",
         description: "This is web based Chatting App",
-        uselang: "ReactJS, Firebase, Chat Engine.io",
-        date: "October 2021",
+        uselang: "Javascript, CSS, Chrome APIs",
+        date: "July 2025",
         type: "website",
-        videoOrWebsiteLink: "http://conections.tk",
-        gihubLink: "https://github.com/neerajdhurandher/Connections",
+        videoOrWebsiteLink: "https://chromewebstore.google.com/detail/neeraj-new-tab/gdopmhkjbdoceejomgdgecljcmhdiphf",
+        gihubLink: "https://github.com/neerajdhurandher/chrome-new-tab",
       },
       {
         image: udemySpringlogo,
@@ -76,13 +77,13 @@ const ProjectPage = () => {
       {
         image: upasthitilogo,
         id: "4",
-        title: "Upasthiti",
-        description: "Students,Teachers Manage App",
-        uselang: "Android, Java, Firebase",
-        date: "December 2020",
-        type: "app",
-        videoOrWebsiteLink: "",
-        gihubLink: "https://github.com/neerajdhurandher/upasthiti",
+        title: "Auto Fill Assistant",
+        description: "Chrome extension to auto fill job application details",
+        uselang: "Javascript, Chrome dev tool",
+        date: "October 2025",
+        type: "website",
+        videoOrWebsiteLink: "https://chromewebstore.google.com/detail/auto-fill-job-application/dodpiialjmdclpanblnhneiclbienkkb",
+        gihubLink: "https://github.com/neerajdhurandher/Auto-Fill-Extension",
       },
       {
         image: mywebsitethumbnail,

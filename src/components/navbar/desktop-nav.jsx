@@ -4,6 +4,8 @@ import { Link } from "react-scroll";
 import './navbar.scss';
 import './hamburger.scss'
 
+import ResumeDownloadButton from '../ui-components/resume-download/resume-button'
+
 // Assets
 import LogoIcon from '../../assets/navbar/neeraj_logo_svg.svg';
 
@@ -34,7 +36,7 @@ const desktopNav = (props) => (
     <div className="wrapper flex-s-between">
       <div>
         <Link to="mainpage" spy={true} smooth={true} offset={-70} duration={500}>
-          <img src={LogoIcon} alt="logo" className="pointer" />
+          <img src={LogoIcon} alt="logo" className="pointer main-logo" />
         </Link>
       </div>
       {/*  hamburger */}
@@ -73,6 +75,9 @@ const desktopNav = (props) => (
             <Link activeClass="active-link" to="contact" spy={true} smooth={true} offset={-70} duration={500}>
               CONTACT
             </Link>
+          </li>
+          <li>
+            <ResumeDownloadButton/>
           </li>
         </ul>
       </div>
