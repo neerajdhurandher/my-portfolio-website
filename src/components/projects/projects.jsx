@@ -11,7 +11,6 @@ import '../../style/App.scss';
 import yaarilogo from "../../assets/projects/yaari_logo.png";
 import upasthitilogo from "../../assets/projects/upasthiti_logo.jpg";
 import mywebsitethumbnail from "../../assets/projects/my_website_thumbnail.png";
-import connectionslogo from "../../assets/projects/connections.png";
 import udemySpringlogo from "../../assets/projects/udemy_spring_2.png";
 import chrome_new_tab from "../../assets/projects/chrome_new_tab.png"
 
