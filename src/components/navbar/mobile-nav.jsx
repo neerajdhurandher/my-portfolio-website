@@ -39,7 +39,7 @@ const mobileNav = (props) => (
         </li>
 
         <li className="flex-center">
-          <NavItem  to = "projects" name = "PROJECTS" action = {props.closeMobileMenu}/>
+          <NavItem  to = "project-new" name = "PROJECTS" action = {props.closeMobileMenu}/>
         </li>
 
         <li className="flex-center">
