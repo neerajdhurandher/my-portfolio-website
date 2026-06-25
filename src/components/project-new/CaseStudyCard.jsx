@@ -100,6 +100,7 @@ const CaseStudyCard = ({ data }) => {
                     key={link.label}
                     href={link.href}
                     target='_blank'
+                    rel='noreferrer'
                     className={`case-study-card__link case-study-card__link--${link.primary ? 'primary' : 'secondary'}`}
                   >
                     {link.label}
