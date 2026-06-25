@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './style/App.scss';
 
 // Components
@@ -8,7 +9,7 @@ import Backdrop from "./components/navbar/backdrop";
 import MainPage from './components/mainpage/mainpage';
 import Skills from "./components/skills/skills";
 import About from "./components/about/about";
-import Projects from "./components/projects/projects";
+import ProjectNew from './components/project-new/ProjectNew';
 import Contact from "./components/contact/contact";
 import FooterContact from "./components/footer/footerContact";
 import Footer from "./components/footer/footer";
@@ -61,28 +62,32 @@ class App extends React.Component {
     }
 
     return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="*" element={
+            <div className="App">
 
-      <div className="App">
+              {mobileNavbar}
+              {backdrop}
+              <DesktopNav
+                mobileNavbarOpen={this.state.mobileNavbarOpen}
+                userIsScrolled={this.state.userIsScrolled}
+                mobileMenuOpen={this.mobileMenuOpen}
+                closeMobileMenu={this.closeMobileMenu}
+              />
 
-        {mobileNavbar}
-        {backdrop}
-        <DesktopNav
-          mobileNavbarOpen={this.state.mobileNavbarOpen}
-          userIsScrolled={this.state.userIsScrolled}
-          mobileMenuOpen={this.mobileMenuOpen}
-          closeMobileMenu={this.closeMobileMenu}
-        />
+              <MainPage />
+              <Skills />
+              <About />
+              <ProjectNew />
+              <Contact />
+              <FooterContact />
+              <Footer />
 
-        <MainPage />
-        <Skills />
-        <About />
-        <Projects />
-        <Contact />
-        <FooterContact />
-        <Footer />
-
-      </div>
-
+            </div>
+          } />
+        </Routes>
+      </BrowserRouter>
     );
   }
 }
