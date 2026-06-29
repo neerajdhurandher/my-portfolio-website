@@ -52,9 +52,6 @@ const ProjectNew = () => (
         </div>
       </Fade>
 
-      {/* Contact CTA */}
-      <CaseStudyCTA />
-
     </Container>
   </section>
 );

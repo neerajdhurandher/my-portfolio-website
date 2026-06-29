@@ -1,6 +1,7 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { Link } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
 
 // When `href` is provided the button navigates to that URL (used on pages
 // where react-scroll has no targets to scroll to).
@@ -16,9 +17,18 @@ const CaseStudyCTA = ({ href }) => (
         architectural integrity.
       </p>
       {href ? (
-        <a href={href} className="case-study-cta__btn">
-          Start a Conversation
-        </a>
+        href.startsWith('/#') ? (
+          <RouterLink
+            to={{ pathname: '/', hash: href.substring(1) }}
+            className="case-study-cta__btn"
+          >
+            Start a Conversation
+          </RouterLink>
+        ) : (
+          <a href={href} className="case-study-cta__btn">
+            Start a Conversation
+          </a>
+        )
       ) : (
         <Link
           to="contact"
