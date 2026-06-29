@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 import './project-new.scss';
 import CaseStudyCard from './CaseStudyCard';
-import CaseStudyCTA from './CaseStudyCTA';
 import { CASE_STUDIES } from '../../data/caseStudies';
 
 // ── Component ────────────────────────────────────────────────────────────────

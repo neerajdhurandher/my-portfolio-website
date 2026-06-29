@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-scroll";
 // SCSS
 import './navbar.scss';
 import './hamburger.scss'
