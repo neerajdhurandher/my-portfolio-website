@@ -53,7 +53,7 @@ const about = () => (
         <div className="box-yellow-border contact-box" >
           <Row>
             <Col md={12} lg={6}>
-              <Fade left duration={1000}>
+              <Fade left duration={1000} triggerOnce>
                 <div>
                   <AboutDetails type="email" title="Email " value="websiteneeraj@gmail.com" link={email_link} />
                   <p style={{ color: "transparent" }} >lorem</p>
@@ -65,7 +65,7 @@ const about = () => (
 
 
             <Col md={12} lg={6}>
-              <Fade right duration={1000}>
+              <Fade right duration={1000} triggerOnce>
                 <div >
                   <AboutDetails type="website" title="Website " value="neerajdhurandher.me" link="https://neerajdhurandher.me/" />
                   <p style={{ color: "transparent" }} >lorem</p>
@@ -85,15 +85,15 @@ const about = () => (
         <p className="some-heading-full-display">Work Experience</p>
       </div>
 
-      <Fade left duration={1000}>
+      <Fade left duration={1000} triggerOnce>
         <EduWorkBox avatar={hpe_logo} name="Hewlett Packard Enterprise (HPE)" name_last="Bengaluru" job="Software Engineer II" year="JUN 2026 - Present" link="https://hpe.com/" />
       </Fade>
 
-      <Fade left duration={1000}>
+      <Fade left duration={1000} triggerOnce>
         <EduWorkBox avatar={hashedin_logo} name="Hashedin by Deloitte, Bengaluru" name_last="" job="Software Engineer II" year="MAR 2022 - JUN 2026" link="https://hashedin.com/" />
       </Fade>
 
-      <Fade right duration={1000}>
+      <Fade right duration={1000} triggerOnce>
         <EduWorkBox avatar={atg_logo} name="Across The Globe (ATG) , Bengaluru" name_last="" job="Android Developer Intern " year="JUN - DEC 2021" link="https://www.atg.world/" />
       </Fade>
 
@@ -101,10 +101,10 @@ const about = () => (
         <p className="some-heading-full-display">Education</p>
       </div>
 
-      <Fade left duration={1000}>
+      <Fade left duration={1000} triggerOnce>
         <EduWorkBox avatar={rungta_logo} name="Rungta College Of Engineering" name_last="and Technology , Bhilai" job="B.E. (CSE)" year="2018-2022" link="https://www.rungta.ac.in/" />
       </Fade>
-      <Fade right duration={1000}>
+      <Fade right duration={1000} triggerOnce>
         <EduWorkBox avatar={shakuntala_logo} name="Shakuntala Vidyalaya , Bhilai" name_last="" job="12th & 10th" year="2018 & 2016" link="http://www.shakuntalavidyalaya.edu.in/" />
       </Fade>
 

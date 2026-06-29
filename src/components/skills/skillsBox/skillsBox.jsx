@@ -4,7 +4,7 @@ import Fade from "react-awesome-reveal"
 import "./skillsBox.scss";
 
 const skillsBox = (props) => (
-  <Fade top distance="10px">
+  <Fade top distance="10px" triggerOnce>
     <div className="skills__box ">
       <img className="skill_img" src={props.preview} alt="project" />
       <div className="text-center">

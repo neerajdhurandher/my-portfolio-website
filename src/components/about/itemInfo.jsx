@@ -7,7 +7,7 @@ import "./itemInfo.scss";
 const about = (props) => (
   <div className="item_info " >
     <div>
-    <Zoom left cascade >
+    <Zoom left cascade triggerOnce>
       <h4 className="font40 weight800 padding30">{props.title}</h4>
       </Zoom>
       <p className="font18 weight500 padding40">{props.des}</p>
