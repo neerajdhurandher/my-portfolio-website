@@ -13,7 +13,7 @@ import my_photo from '../../assets/mainpage/my_photo.png';
 
 
 const mainpage = () => (
-  <div className="hero" id="mainpage">
+  <div className="hero" id="home">
     <div className="wrapper">
       <Row>
         <Col md={6} lg={6}>

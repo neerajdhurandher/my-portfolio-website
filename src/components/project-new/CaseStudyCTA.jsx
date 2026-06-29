@@ -2,7 +2,9 @@ import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { Link } from 'react-scroll';
 
-const CaseStudyCTA = () => (
+// When `href` is provided the button navigates to that URL (used on pages
+// where react-scroll has no targets to scroll to).
+const CaseStudyCTA = ({ href }) => (
   <Fade direction="up" triggerOnce duration={700}>
     <div className="case-study-cta">
       <div className="case-study-cta__glow" />
@@ -13,16 +15,22 @@ const CaseStudyCTA = () => (
         I&apos;m looking for partners who value precision engineering and
         architectural integrity.
       </p>
-      <Link
-        to="contact"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-        className="case-study-cta__btn"
-      >
-        Start a Conversation
-      </Link>
+      {href ? (
+        <a href={href} className="case-study-cta__btn">
+          Start a Conversation
+        </a>
+      ) : (
+        <Link
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="case-study-cta__btn"
+        >
+          Start a Conversation
+        </Link>
+      )}
     </div>
   </Fade>
 );
