@@ -1,23 +1,14 @@
 import React from "react";
-import { Link } from "react-scroll";
 import "./navbar.scss";
-import ResumeDownloadButton from "../ui-components/resume-download/resume-button"
+import ResumeDownloadButton from "../ui-components/resume-download/resume-button";
+import NavScrollLink from "./NavScrollLink";
 
-function NavItem (props) {
-  
+function NavItem(props) {
   return (
-  <Link
-    activeClass="active-link"
-    to= {props.to}
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration={500}
-    onClick={props.action}
-  >
-    {props.name}
-  </Link>
-  )
+    <NavScrollLink to={props.to} onClick={props.action}>
+      {props.name}
+    </NavScrollLink>
+  );
 }
 
 const mobileNav = (props) => (
@@ -27,7 +18,7 @@ const mobileNav = (props) => (
     <div className="mobile__navbar-menu">
       <ul>
         <li className="flex-center">
-          <NavItem  to = "mainpage" name = "HOME" action = {props.closeMobileMenu}/>
+          <NavItem  to = "home" name = "HOME" action = {props.closeMobileMenu}/>
         </li>
 
         <li className="flex-center">
@@ -39,7 +30,7 @@ const mobileNav = (props) => (
         </li>
 
         <li className="flex-center">
-          <NavItem  to = "project-new" name = "PROJECTS" action = {props.closeMobileMenu}/>
+          <NavItem  to = "projects" name = "PROJECTS" action = {props.closeMobileMenu}/>
         </li>
 
         <li className="flex-center">

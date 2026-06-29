@@ -13,6 +13,8 @@ import ProjectNew from './components/project-new/ProjectNew';
 import Contact from "./components/contact/contact";
 import FooterContact from "./components/footer/footerContact";
 import Footer from "./components/footer/footer";
+import ProjectsPage from './pages/ProjectsPage';
+import ScrollToTop from './components/ScrollToTop';
 
 class App extends React.Component {
   state = {
@@ -63,7 +65,26 @@ class App extends React.Component {
 
     return (
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
+
+          {/* ── Projects page ──────────────────────────────────── */}
+          <Route path="/projects" element={
+            <div className="App">
+              {mobileNavbar}
+              {backdrop}
+              <DesktopNav
+                mobileNavbarOpen={this.state.mobileNavbarOpen}
+                userIsScrolled={this.state.userIsScrolled}
+                mobileMenuOpen={this.mobileMenuOpen}
+                closeMobileMenu={this.closeMobileMenu}
+              />
+              <ProjectsPage />
+              <Footer />
+            </div>
+          } />
+
+          {/* ── Main / catch-all ───────────────────────────────── */}
           <Route path="*" element={
             <div className="App">
 

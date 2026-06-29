@@ -5,6 +5,7 @@ import './navbar.scss';
 import './hamburger.scss'
 
 import ResumeDownloadButton from '../ui-components/resume-download/resume-button'
+import NavScrollLink from './NavScrollLink';
 
 // Assets
 import LogoIcon from '../../assets/navbar/neeraj_logo_svg.svg';
@@ -35,9 +36,9 @@ const desktopNav = (props) => (
 
     <div className="wrapper flex-s-between">
       <div>
-        <Link to="mainpage" spy={true} smooth={true} offset={-70} duration={500}>
+        <NavScrollLink to="home">
           <img src={LogoIcon} alt="logo" className="pointer main-logo" />
-        </Link>
+        </NavScrollLink>
       </div>
       {/*  hamburger */}
       <div className="mobile__menu" onClick={menuOpen ? props.closeMobileMenu : props.mobileMenuOpen}  >
@@ -51,30 +52,20 @@ const desktopNav = (props) => (
 
       <div className="desktop__menu">
         <ul className="flex-s-between">
-          <li >
-            <Link activeClass="active-link" to="mainpage" spy={true} smooth={true} offset={-70} duration={500}>
-              HOME
-            </Link>
+          <li>
+            <NavScrollLink to="home">HOME</NavScrollLink>
           </li>
           <li>
-            <Link activeClass="active-link" to="about" spy={true} smooth={true} offset={-70} duration={500}>
-              ABOUT
-            </Link>
+            <NavScrollLink to="about">ABOUT</NavScrollLink>
           </li>
           <li>
-            <Link activeClass="active-link" to="skills" spy={true} smooth={true} offset={-70} duration={500}>
-              SKILLS
-            </Link>
+            <NavScrollLink to="skills">SKILLS</NavScrollLink>
           </li>
           <li>
-            <Link activeClass="active-link" to="project-new" spy={true} smooth={true} offset={-70} duration={500}>
-              PROJECTS
-            </Link>
+            <NavScrollLink to="projects">PROJECTS</NavScrollLink>
           </li>
           <li>
-            <Link activeClass="active-link" to="contact" spy={true} smooth={true} offset={-70} duration={500}>
-              CONTACT
-            </Link>
+            <NavScrollLink to="contact">CONTACT</NavScrollLink>
           </li>
           <li>
             <ResumeDownloadButton/>

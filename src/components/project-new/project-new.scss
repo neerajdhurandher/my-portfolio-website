@@ -96,6 +96,48 @@ $text-dim:     rgba($light-color, 0.42);
       gap: 6rem;
     }
   }
+
+  // ── View-all CTA ──────────────────────────────────────────
+  &__view-all {
+    text-align: center;
+    margin-top: 7rem;
+
+    @media (max-width: 767px) {
+      margin-top: 5rem;
+    }
+  }
+
+  &__view-all-hint {
+    font-size: 1.3rem;
+    color: $text-dim;
+    margin-bottom: 2rem;
+  }
+
+  &__view-all-btn {
+    display: inline-block;
+    background: transparent;
+    color: $main-color;
+    border: 1px solid rgba($main-color, 0.5);
+    padding: 1.4rem 4.8rem;
+    border-radius: 8px;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    transition: $transition;
+
+    &:hover {
+      background: rgba($main-color, 0.08);
+      border-color: $main-color;
+      transform: translateY(-3px);
+      color: $main-color;
+      text-decoration: none;
+    }
+
+    &:active {
+      transform: translateY(-1px);
+    }
+  }
 }
 
 // ════════════════════════════════════════════════════════════
@@ -200,6 +242,48 @@ $text-dim:     rgba($light-color, 0.42);
       radial-gradient(ellipse at 50% 80%, rgba($main-color, 0.08) 0%, transparent 45%),
       radial-gradient(ellipse at 20% 20%, rgba(180, 90, 255, 0.08) 0%, transparent 45%),
       linear-gradient(135deg, #10091a 0%, #1c1028 55%, #10091a 100%);
+  }
+
+  .gradient--forge {
+    background:
+      radial-gradient(ellipse at 20% 80%, rgba(255, 150, 50, 0.09) 0%, transparent 45%),
+      radial-gradient(ellipse at 80% 20%, rgba(255, 200, 70, 0.08) 0%, transparent 45%),
+      linear-gradient(135deg, #1a0f06 0%, #2a1a0a 55%, #1a0f06 100%);
+  }
+
+  .gradient--prism {
+    background:
+      radial-gradient(ellipse at 25% 75%, rgba(100, 130, 255, 0.09) 0%, transparent 45%),
+      radial-gradient(ellipse at 78% 22%, rgba(50, 180, 240, 0.08) 0%, transparent 45%),
+      linear-gradient(135deg, #090a1a 0%, #0f1228 55%, #090a1a 100%);
+  }
+
+  .gradient--flow {
+    background:
+      radial-gradient(ellipse at 22% 78%, rgba(40, 220, 200, 0.09) 0%, transparent 45%),
+      radial-gradient(ellipse at 76% 24%, rgba(50, 180, 255, 0.08) 0%, transparent 45%),
+      linear-gradient(135deg, #06141a 0%, #0a1e28 55%, #06141a 100%);
+  }
+
+  .gradient--lens {
+    background:
+      radial-gradient(ellipse at 30% 70%, rgba(255, 100, 160, 0.09) 0%, transparent 45%),
+      radial-gradient(ellipse at 72% 28%, rgba(200, 100, 255, 0.08) 0%, transparent 45%),
+      linear-gradient(135deg, #1a0612 0%, #28101e 55%, #1a0612 100%);
+  }
+
+  .gradient--core {
+    background:
+      radial-gradient(ellipse at 18% 82%, rgba(255, 80, 60, 0.09) 0%, transparent 45%),
+      radial-gradient(ellipse at 82% 18%, rgba(240, 150, 50, 0.08) 0%, transparent 45%),
+      linear-gradient(135deg, #1a0805 0%, #28120a 55%, #1a0805 100%);
+  }
+
+  .gradient--pulse {
+    background:
+      radial-gradient(ellipse at 24% 76%, rgba(180, 240, 60, 0.09) 0%, transparent 45%),
+      radial-gradient(ellipse at 74% 26%, rgba(60, 220, 120, 0.08) 0%, transparent 45%),
+      linear-gradient(135deg, #0c1a06 0%, #142810 55%, #0c1a06 100%);
   }
 
   // Tech chips (sits above the gradients)
